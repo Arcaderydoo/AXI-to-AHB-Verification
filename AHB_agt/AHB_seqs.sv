@@ -76,3 +76,20 @@ class AHB_err_seqs extends AHB_base_seqs;
 
 endclass
 
+class AHB_free_run_seqs extends AHB_base_seqs;
+
+	`uvm_object_utils(AHB_free_run_seqs)
+
+	function new (string name = "AHB_free_run_seqs");
+		super.new(name);
+	endfunction
+
+	task body;
+		forever begin
+			start_item(req);
+			assert(req.randomize() with {delay_cycles inside {[2:6]}; cases == NORMAL;});
+			finish_item(req);
+		end
+	endtask
+
+endclass
