@@ -87,6 +87,7 @@ class AXI_fixed_test extends test;
 	`uvm_component_utils(AXI_fixed_test)
 
 	AXI_fixed_seqs seqh;
+	AHB_free_run_seqs ahb_bg_seqh;
 
 	function new (string name = "AXI_fixed_test", uvm_component parent);
 		super.new(name, parent);
@@ -95,7 +96,11 @@ class AXI_fixed_test extends test;
 	task run_phase (uvm_phase phase);
 		super.run_phase(phase);
 		seqh = AXI_fixed_seqs::type_id::create("seqh");
+		ahb_bg_seqh = AHB_free_run_seqs::type_id::create("ahb_bg_seqh");
 		phase.raise_objection(this);
+		fork
+			ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
+		join_none
 		seqh.start(envh.AXI_agth[0].seqrh);
 		phase.drop_objection(this);
 	endtask
@@ -107,6 +112,7 @@ class AXI_increment_test extends test;
 	`uvm_component_utils(AXI_increment_test)
 
 	AXI_inc_seqs axi_inc_seqh;
+	AHB_free_run_seqs ahb_bg_seqh;
 
 	function new (string name = "AXI_increment_test", uvm_component parent);
 		super.new(name, parent);
@@ -115,7 +121,11 @@ class AXI_increment_test extends test;
 	task run_phase (uvm_phase phase);
 		super.run_phase(phase);
 		axi_inc_seqh = AXI_inc_seqs::type_id::create("axi_inc_seqh");
+		ahb_bg_seqh = AHB_free_run_seqs::type_id::create("ahb_bg_seqh");
 		phase.raise_objection(this);
+		fork
+			ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
+		join_none
 		axi_inc_seqh.start(envh.AXI_agth[0].seqrh);
 		#1000;
 		phase.drop_objection(this);
@@ -128,6 +138,7 @@ class AXI_wrapped_test extends test;
 	`uvm_component_utils(AXI_wrapped_test)
 
 	AXI_wrap_seqs axi_wrap_seqh;
+	AHB_free_run_seqs ahb_bg_seqh;
 
 	function new (string name = "AXI_wrapped_test", uvm_component parent);
 		super.new(name, parent);
@@ -136,7 +147,11 @@ class AXI_wrapped_test extends test;
 	task run_phase (uvm_phase phase);
 		super.run_phase(phase);
 		axi_wrap_seqh = AXI_wrap_seqs::type_id::create("axi_wrap_seqh");
+		ahb_bg_seqh = AHB_free_run_seqs::type_id::create("ahb_bg_seqh");
 		phase.raise_objection(this);
+		fork
+			ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
+		join_none
 		axi_wrap_seqh.start(envh.AXI_agth[0].seqrh);
 		#1000;
 		phase.drop_objection(this);
