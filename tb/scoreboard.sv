@@ -68,7 +68,7 @@ class scoreboard extends uvm_scoreboard;
 
 	covergroup axi_rdata_cg with function sample (int i);
 		option.per_instance = 1;
-		AXI_RDATA: coverpoint axi_cov.wdata[i] {bins data = {[64'h0: 64'hffff_ffff_ffff_ffff]};}
+		AXI_RDATA: coverpoint axi_cov.rdata[i] {bins data = {[64'h0: 64'hffff_ffff_ffff_ffff]};}
 		AXI_RRESP: coverpoint axi_cov.rresp[i] {bins strobe[] = {0};}
 	endgroup
 
