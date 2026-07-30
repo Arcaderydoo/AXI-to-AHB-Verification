@@ -99,9 +99,10 @@ class AXI_fixed_test extends test;
 		ahb_bg_seqh = AHB_free_run_seqs::type_id::create("ahb_bg_seqh");
 		phase.raise_objection(this);
 		fork
-			ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
-		join_none
+		#1000 ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
 		seqh.start(envh.AXI_agth[0].seqrh);
+		join
+		#100;
 		phase.drop_objection(this);
 	endtask
 

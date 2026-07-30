@@ -28,7 +28,7 @@ class AXI_fixed_seqs extends AXI_base_seqs;
 		super.body();	
 
 		start_item(req);
-		assert(req.randomize with {awvalid == 1'b1; wvalid == 1'b1; arvalid == 1'b1; awsize == 3'b000; awlen == len; awaddr == 2000;  bready == 1'b1; rready == 1'b1;});
+		assert(req.randomize with {awvalid == 1'b1; wvalid == 1'b1; arvalid == 1'b0; awsize == 3'b001; awlen == len; awaddr == 32'habab;  bready == 1'b1; rready == 1'b1;});
 		finish_item(req);
 
 	endtask
