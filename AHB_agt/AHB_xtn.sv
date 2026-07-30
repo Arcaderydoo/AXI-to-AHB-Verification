@@ -3,7 +3,7 @@ class AHB_xtn extends uvm_sequence_item;
 	`uvm_object_utils(AHB_xtn)
 
 	bit [31:0] haddr;
-	bit htrans;
+	bit [1:0] htrans;
 	bit hwrite;
 	bit [2:0] hsize;
 	bit [2:0] hburst;
@@ -13,7 +13,7 @@ class AHB_xtn extends uvm_sequence_item;
 	
 	rand bit [63:0] hrdata;
 	rand bit hready;
-	rand bit hresp;
+	rand bit [1:0] hresp;
 	rand bit hgrant;
 	rand bit [3:0] hmaster;
 

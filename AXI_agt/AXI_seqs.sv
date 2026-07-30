@@ -28,7 +28,7 @@ class AXI_fixed_seqs extends AXI_base_seqs;
 		super.body();	
 
 		start_item(req);
-		assert(req.randomize with {awvalid == 1'b1; wvalid == 1'b1; arvalid == 1'b0; awsize == 3'b001; awlen == len; awaddr == 32'habab;  bready == 1'b1; rready == 1'b1;});
+		assert(req.randomize with {awvalid == 1'b1; wvalid == 1'b1; arvalid == 1'b0; awsize == 3'b001; awburst == 2'b01; awlen == len; awaddr == 32'h0;  bready == 1'b1; rready == 1'b1;});
 		finish_item(req);
 
 	endtask
@@ -47,7 +47,7 @@ class AXI_inc_seqs extends AXI_base_seqs;
 		super.body();	
 		start_item(req);
 		assert(req.randomize with {awvalid == 1'b1; awburst == 2'b01; awlen == len; awsize == 3'd3;
-		wvalid == 1'b1; arvalid == 1'b1; bready == 1'b1; rready == 1'b1;});
+		wvalid == 1'b1; arvalid == 1'b0; bready == 1'b1; rready == 1'b1;});
 		finish_item(req);
 	endtask
 
@@ -66,7 +66,7 @@ class AXI_wrap_seqs extends AXI_base_seqs;
 		super.body();	
 		start_item(req);
 		assert(req.randomize with {awvalid == 1'b1; awaddr == 2000; awburst == 2'b10; awlen == len; awsize == 3'd0;
-		wvalid == 1'b1; arvalid == 1'b1; bready == 1'b1; rready == 1'b1;});
+		wvalid == 1'b1; arvalid == 1'b1; arlen == len; arsize == 3'd0; arburst == 2'b10;  bready == 1'b1; rready == 1'b1;});
 		finish_item(req);
 	endtask
 

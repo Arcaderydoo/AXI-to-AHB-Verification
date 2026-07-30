@@ -48,8 +48,8 @@ class AXI_xtn extends uvm_sequence_item;
 	int delay_cycles = 1;
 
 	// ID remains same for write channels and read channels
-	constraint write_id {wid == awid; bid == awid;}
-	constraint read_id {rid == arid;}
+	constraint write_id {wid == awid;}
+	//constraint read_id {rid == arid;}
 	
 	// Valid burst sizes (0 == FIXED, 1 == INCR, 2 == WRAP)
 	constraint write_burst {awburst inside {0, 1, 2};}
