@@ -32,7 +32,7 @@ run_test_3: cmp_VCS
 	urg -dir axiwrapped_data.vdb -format both -report axifixedReport
 
 run_test_4: cmp_VCS
-	./simv -a out.log +UVM_TESTNAME=AHB_normal_test +fsdbfile+axiahb.fsdb +ntb_random_seed_automatic -cm_dir ./ahbnormal_data
+	./simv -l ahbnormaltest.log +UVM_TESTNAME=AHB_normal_test +fsdbfile+axiahb.fsdb +ntb_random_seed_automatic -cm_dir ./ahbnormal_data
 	urg -dir ahbnormal_data.vdb -format both -report ahbnormalReport
 
 report:
