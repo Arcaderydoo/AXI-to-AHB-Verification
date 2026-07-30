@@ -87,7 +87,7 @@ class AXI_fixed_test extends test;
 	`uvm_component_utils(AXI_fixed_test)
 
 	AXI_fixed_seqs seqh;
-	AHB_free_run_seqs ahb_bg_seqh;
+	AHB_normal_seqs ahb_bg_seqh;
 
 	function new (string name = "AXI_fixed_test", uvm_component parent);
 		super.new(name, parent);
@@ -96,13 +96,13 @@ class AXI_fixed_test extends test;
 	task run_phase (uvm_phase phase);
 		super.run_phase(phase);
 		seqh = AXI_fixed_seqs::type_id::create("seqh");
-		ahb_bg_seqh = AHB_free_run_seqs::type_id::create("ahb_bg_seqh");
+		ahb_bg_seqh = AHB_normal_seqs::type_id::create("ahb_bg_seqh");
 		phase.raise_objection(this);
 		fork
-		#1000 ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
-		seqh.start(envh.AXI_agth[0].seqrh);
+			seqh.start(envh.AXI_agth[0].seqrh);
+			ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
 		join
-		#100;
+		#1000;
 		phase.drop_objection(this);
 	endtask
 

@@ -27,7 +27,8 @@ class AHB_normal_seqs extends AHB_base_seqs;
 	task body;
 		super.body();
 
-		repeat (2 * len + 1) begin
+		//repeat (2 * len + 1) begin
+		forever begin
 			start_item(req);
 			assert(req.randomize() with {delay_cycles == 0; cases == NORMAL;});
 			finish_item(req);
@@ -87,7 +88,7 @@ class AHB_free_run_seqs extends AHB_base_seqs;
 	task body;
 		forever begin
 			start_item(req);
-			assert(req.randomize() with {delay_cycles inside {[2:6]}; cases == WAIT_STATES;});
+			assert(req.randomize() with {delay_cycles inside {[2:6]}; cases == NORMAL;});
 			finish_item(req);
 		end
 	endtask
