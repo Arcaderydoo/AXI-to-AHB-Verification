@@ -134,8 +134,8 @@ class scoreboard extends uvm_scoreboard;
 				AHB_fifoh.get(ahb_xtn);
 				`uvm_info(get_type_name(), "got ahb data", UVM_LOW)
 				ahb_cov = new ahb_xtn;
-				compare_data(ahb_xtn);
 				ahb_cg.sample();
+				compare_data(ahb_xtn);
 			end
 			// Get write data in AXI
 			forever begin

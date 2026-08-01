@@ -27,22 +27,22 @@ module fifo2axi(
 	input					rready
 );//read directly
 
-	wire ready;
-	assign ready = bready&rready;
+	//wire ready;
+	//assign ready = bready&rready;
 
 	wire fifo_empty;
 	assign fifo_empty = rdata_fifo_empty|resp_fifo_empty|id_resp_fifo_empty;
-/*
+
 	wire read_en;
 	assign read_en = (!rdata_fifo_empty)&(!resp_fifo_empty)&(!id_resp_fifo_empty)&ready;
 
 	assign rdata_r_en = read_en;
 	assign resp_r_en = read_en;
 	assign id_resp_r_en = read_en;
-*/
-	assign rdata_r_en=(!rdata_fifo_empty)&ready;
-	assign resp_r_en=(!resp_fifo_empty)&ready;
-	assign id_resp_r_en=(!id_resp_fifo_empty)&ready;
+
+	//assign rdata_r_en=(!rdata_fifo_empty)&ready;
+	//assign resp_r_en=(!resp_fifo_empty)&ready;
+	//assign id_resp_r_en=(!id_resp_fifo_empty)&ready;
 	
 	always@(posedge aclk or negedge aresetn)
 		if(!aresetn)begin

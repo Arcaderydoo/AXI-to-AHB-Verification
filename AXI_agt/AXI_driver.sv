@@ -92,8 +92,8 @@ class AXI_driver extends uvm_driver #(AXI_xtn);
 				r_channel(r_ch.pop_front());
 				r_sem.put(1);
 			end
-		join_any	
-		//join
+		//join_any	
+		join
 	endtask
 
 	task aw_channel (AXI_xtn xtn);
@@ -149,6 +149,7 @@ class AXI_driver extends uvm_driver #(AXI_xtn);
 		axi_intf.axi_drv_cb.arvalid <= xtn.arvalid;
 		axi_intf.axi_drv_cb.arid <= xtn.arid;
 		axi_intf.axi_drv_cb.arlen <= xtn.arlen;
+		axi_intf.axi_drv_cb.araddr <= xtn.araddr;
 		axi_intf.axi_drv_cb.arsize <= xtn.arsize;
 		axi_intf.axi_drv_cb.arburst <= xtn.arburst;	
 		@(axi_intf.axi_drv_cb);
@@ -159,13 +160,17 @@ class AXI_driver extends uvm_driver #(AXI_xtn);
 	endtask
 	
 	task r_channel (AXI_xtn xtn);
-		@(axi_intf.axi_drv_cb);
-		axi_intf.axi_drv_cb.rready <= xtn.rready;
-		@(axi_intf.axi_drv_cb);
-		wait(axi_intf.axi_drv_cb.rvalid)
-		axi_intf.axi_drv_cb.rready	<= 1'b0;
-		repeat (xtn.delay_cycles)
-		@(axi_intf.axi_drv_cb);
+			@(axi_intf.axi_drv_cb);
+			axi_intf.axi_drv_cb.rready <= xtn.rready;
+			forever begin
+			@(axi_intf.axi_drv_cb);
+			wait(axi_intf.axi_drv_cb.rvalid)
+			if (axi_intf.axi_drv_cb.rlast) break;
+			end
+			axi_intf.axi_drv_cb.rready	<= 1'b0;
+			repeat (xtn.delay_cycles)
+			@(axi_intf.axi_drv_cb);
+	
 	endtask
 
 endclass

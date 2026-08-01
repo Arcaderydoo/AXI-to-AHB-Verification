@@ -85,7 +85,8 @@ module rdata_fifo(
                   (write_addr_gray_wclk[2:0] == read_addr_gray_wclk1[2:0])?1'b1:1'b0:1'b0:1'b0;
     assign empty = (write_addr_gray_rclk1 == read_addr_gray_rclk)?1'b1:1'b0;
     
-	assign data_out = ((read_en == 1'b1) && (empty != 1'b1))?ram[read_addr_rclk[3:0]]:31'b0;
+	//assign data_out = ((read_en == 1'b1) && (empty != 1'b1))?ram[read_addr_rclk[3:0]]:31'b0;
+	assign data_out = ((empty != 1'b1))?ram[read_addr_rclk[3:0]]:31'b0;
     
 	assign write_addr_gray_wclk = (write_addr_wclk>>1)^write_addr_wclk;
     assign read_addr_gray_rclk = (read_addr_rclk>>1)^read_addr_rclk;
