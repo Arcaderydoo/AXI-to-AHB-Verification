@@ -1,6 +1,6 @@
 Dashboard
 
-Date: Sat Aug  1 17:56:14 2026
+Date: Sat Aug  1 18:17:33 2026
 
 User: AKSSolomon
 
@@ -11,11 +11,11 @@ Number of tests: 4
 -------------------------------------------------------------------------------
 Total Coverage Summary 
 SCORE  GROUP  
- 74.71  74.71 
+ 72.52  72.52 
 
 
 -------------------------------------------------------------------------------
 Total Groups Coverage Summary 
 SCORE  INST SCORE WEIGHT 
- 74.71  74.71     1      
+ 72.52  72.52     1      
 

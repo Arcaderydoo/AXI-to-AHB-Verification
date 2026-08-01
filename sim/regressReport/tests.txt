@@ -2,7 +2,7 @@ Tests
 
 Total Coverage Summary 
 SCORE  GROUP  
- 74.71  74.71 
+ 72.52  72.52 
 
 
 Total tests in report: 4

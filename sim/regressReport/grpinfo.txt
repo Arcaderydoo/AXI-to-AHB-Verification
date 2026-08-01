@@ -201,7 +201,7 @@ User Defined Bins for AHB_HADDR
 Bins
 
 NAME       COUNT AT LEAST 
-valid_addr 4     1        
+valid_addr 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -225,7 +225,7 @@ HWRITE_1 0     1        1
 Covered bins
 
 NAME     COUNT AT LEAST 
-HWRITE_0 4     1        
+HWRITE_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -251,7 +251,7 @@ HSIZE_3 0     1        1
 Covered bins
 
 NAME    COUNT AT LEAST 
-HSIZE_0 4     1        
+HSIZE_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -275,7 +275,7 @@ HREADY_0 0     1        1
 Covered bins
 
 NAME     COUNT AT LEAST 
-HREADY_1 4     1        
+HREADY_1 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -299,7 +299,7 @@ HRESP_1 0     1        1
 Covered bins
 
 NAME    COUNT AT LEAST 
-HRESP_0 4     1        
+HRESP_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -317,7 +317,7 @@ User Defined Bins for AHB_HWDATA
 Bins
 
 NAME COUNT AT LEAST 
-data 4     1        
+data 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -335,7 +335,7 @@ User Defined Bins for AHB_HRDATA
 Bins
 
 NAME COUNT AT LEAST 
-data 4     1        
+data 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -391,7 +391,7 @@ User Defined Bins for AHB_HADDR
 Bins
 
 NAME       COUNT AT LEAST 
-valid_addr 4     1        
+valid_addr 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -415,7 +415,7 @@ HWRITE_1 0     1        1
 Covered bins
 
 NAME     COUNT AT LEAST 
-HWRITE_0 4     1        
+HWRITE_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -441,7 +441,7 @@ HSIZE_3 0     1        1
 Covered bins
 
 NAME    COUNT AT LEAST 
-HSIZE_0 4     1        
+HSIZE_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -465,7 +465,7 @@ HREADY_0 0     1        1
 Covered bins
 
 NAME     COUNT AT LEAST 
-HREADY_1 4     1        
+HREADY_1 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -489,7 +489,7 @@ HRESP_1 0     1        1
 Covered bins
 
 NAME    COUNT AT LEAST 
-HRESP_0 4     1        
+HRESP_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -507,7 +507,7 @@ User Defined Bins for AHB_HWDATA
 Bins
 
 NAME COUNT AT LEAST 
-data 4     1        
+data 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -525,7 +525,7 @@ User Defined Bins for AHB_HRDATA
 Bins
 
 NAME COUNT AT LEAST 
-data 4     1        
+data 12    1        
 
 
 Group : top_pkg::scoreboard::axi_wdata_cg
@@ -534,7 +534,7 @@ Group : top_pkg::scoreboard::axi_wdata_cg
 Group : top_pkg::scoreboard::axi_wdata_cg
 ===============================================================================
 SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
- 86.67  86.67    1      100    1        1            64           64            
+ 76.67  76.67    1      100    1        1            64           64            
 
 
 Source File(s) : 
@@ -544,7 +544,7 @@ Source File(s) :
 1 Instances:
 
 SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME                    
- 86.67 1      100    1        64           64            top.me.obj.axi_wdata_cg 
+ 76.67 1      100    1        64           64            top.me.obj.axi_wdata_cg 
 
 
 
@@ -556,7 +556,7 @@ Summary for Group   top_pkg::scoreboard::axi_wdata_cg
 
 
 CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
-Variables 16       4         12      86.67   
+Variables 16       7         9       76.67   
 
 
 Variables for Group  top_pkg::scoreboard::axi_wdata_cg
@@ -564,7 +564,7 @@ Variables for Group  top_pkg::scoreboard::axi_wdata_cg
 
 VARIABLE  EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
 AXI_WDATA 1        0         1       100.00  100  1      1        0                    
-AXI_WSTRB 15       4         11      73.33   100  1      1        0                    
+AXI_WSTRB 15       7         8       53.33   100  1      1        0                    
 
 
 -------------------------------------------------------------------------------
@@ -582,7 +582,7 @@ User Defined Bins for AXI_WDATA
 Bins
 
 NAME COUNT AT LEAST 
-data 40    1        
+data 20    1        
 
 
 -------------------------------------------------------------------------------
@@ -591,7 +591,7 @@ Summary for Variable AXI_WSTRB
 
 
 CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
-User Defined Bins 15       4         11      73.33   
+User Defined Bins 15       7         8       53.33   
 
 
 User Defined Bins for AXI_WSTRB
@@ -600,8 +600,11 @@ User Defined Bins for AXI_WSTRB
 Uncovered bins
 
 NAME      COUNT AT LEAST NUMBER 
+strobe_08 0     1        1      
+strobe_10 0     1        1      
 strobe_20 0     1        1      
 strobe_40 0     1        1      
+strobe_80 0     1        1      
 strobe_0f 0     1        1      
 strobe_f0 0     1        1      
 
@@ -611,15 +614,12 @@ Covered bins
 NAME      COUNT AT LEAST 
 strobe_01 4     1        
 strobe_02 4     1        
-strobe_04 4     1        
-strobe_08 4     1        
-strobe_10 4     1        
-strobe_80 2     1        
-strobe_03 4     1        
+strobe_04 2     1        
+strobe_03 2     1        
 strobe_0c 2     1        
-strobe_30 2     1        
+strobe_30 1     1        
 strobe_c0 2     1        
-strobe_ff 8     1        
+strobe_ff 3     1        
 
 
 -------------------------------------------------------------------------------
@@ -627,13 +627,13 @@ strobe_ff 8     1
 Group Instance : top.me.obj.axi_wdata_cg
 ===============================================================================
 SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
- 86.67 1      100    1        64           64            
+ 76.67 1      100    1        64           64            
 
 
 Group:
 
 SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                              
- 86.67  86.67    1      100    1        1            64           64                    top_pkg::scoreboard::axi_wdata_cg 
+ 76.67  76.67    1      100    1        1            64           64                    top_pkg::scoreboard::axi_wdata_cg 
 
 
 
@@ -644,7 +644,7 @@ Summary for Group Instance   top.me.obj.axi_wdata_cg
 
 
 CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
-Variables 16       4         12      86.67   
+Variables 16       7         9       76.67   
 
 
 Variables for Group Instance  top.me.obj.axi_wdata_cg
@@ -652,7 +652,7 @@ Variables for Group Instance  top.me.obj.axi_wdata_cg
 
 VARIABLE  EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
 AXI_WDATA 1        0         1       100.00  100  1      1        0                    
-AXI_WSTRB 15       4         11      73.33   100  1      1        0                    
+AXI_WSTRB 15       7         8       53.33   100  1      1        0                    
 
 
 -------------------------------------------------------------------------------
@@ -670,7 +670,7 @@ User Defined Bins for AXI_WDATA
 Bins
 
 NAME COUNT AT LEAST 
-data 40    1        
+data 20    1        
 
 
 -------------------------------------------------------------------------------
@@ -679,7 +679,7 @@ Summary for Variable AXI_WSTRB
 
 
 CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
-User Defined Bins 15       4         11      73.33   
+User Defined Bins 15       7         8       53.33   
 
 
 User Defined Bins for AXI_WSTRB
@@ -688,8 +688,11 @@ User Defined Bins for AXI_WSTRB
 Uncovered bins
 
 NAME      COUNT AT LEAST NUMBER 
+strobe_08 0     1        1      
+strobe_10 0     1        1      
 strobe_20 0     1        1      
 strobe_40 0     1        1      
+strobe_80 0     1        1      
 strobe_0f 0     1        1      
 strobe_f0 0     1        1      
 
@@ -699,15 +702,12 @@ Covered bins
 NAME      COUNT AT LEAST 
 strobe_01 4     1        
 strobe_02 4     1        
-strobe_04 4     1        
-strobe_08 4     1        
-strobe_10 4     1        
-strobe_80 2     1        
-strobe_03 4     1        
+strobe_04 2     1        
+strobe_03 2     1        
 strobe_0c 2     1        
-strobe_30 2     1        
+strobe_30 1     1        
 strobe_c0 2     1        
-strobe_ff 8     1        
+strobe_ff 3     1        
 
 
 Group : top_pkg::scoreboard::axi_cg
@@ -716,7 +716,7 @@ Group : top_pkg::scoreboard::axi_cg
 Group : top_pkg::scoreboard::axi_cg
 ===============================================================================
 SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
- 93.75  93.75    1      100    1        1            64           64            
+ 90.62  90.62    1      100    1        1            64           64            
 
 
 Source File(s) : 
@@ -726,7 +726,7 @@ Source File(s) :
 1 Instances:
 
 SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME              
- 93.75 1      100    1        64           64            top.me.obj.axi_cg 
+ 90.62 1      100    1        64           64            top.me.obj.axi_cg 
 
 
 
@@ -738,7 +738,7 @@ Summary for Group   top_pkg::scoreboard::axi_cg
 
 
 CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
-Variables 19       2         17      93.75   
+Variables 19       3         16      90.62   
 
 
 Variables for Group  top_pkg::scoreboard::axi_cg
@@ -751,7 +751,7 @@ AXI_AWLEN   1        0         1       100.00  100  1      1        0
 AXI_AWSIZE  1        0         1       100.00  100  1      1        0                    
 AXI_AWBURST 1        0         1       100.00  100  1      1        0                    
 AXI_WID     1        0         1       100.00  100  1      1        0                    
-AXI_WLAST   2        0         2       100.00  100  1      1        0                    
+AXI_WLAST   2        1         1       50.00   100  1      1        0                    
 AXI_BID     1        0         1       100.00  100  1      1        0                    
 AXI_BRESP   2        1         1       50.00   100  1      1        0                    
 AXI_ARID    1        0         1       100.00  100  1      1        0                    
@@ -778,7 +778,7 @@ User Defined Bins for AXI_AWID
 Bins
 
 NAME COUNT AT LEAST 
-id   24    1        
+id   12    1        
 
 
 -------------------------------------------------------------------------------
@@ -796,7 +796,7 @@ User Defined Bins for AXI_AWADDR
 Bins
 
 NAME       COUNT AT LEAST 
-valid_addr 24    1        
+valid_addr 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -814,7 +814,7 @@ User Defined Bins for AXI_AWLEN
 Bins
 
 NAME  COUNT AT LEAST 
-AWLEN 24    1        
+AWLEN 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -832,7 +832,7 @@ User Defined Bins for AXI_AWSIZE
 Bins
 
 NAME   COUNT AT LEAST 
-AWSIZE 24    1        
+AWSIZE 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -850,7 +850,7 @@ User Defined Bins for AXI_AWBURST
 Bins
 
 NAME    COUNT AT LEAST 
-AWBURST 24    1        
+AWBURST 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -868,7 +868,7 @@ User Defined Bins for AXI_WID
 Bins
 
 NAME COUNT AT LEAST 
-id   24    1        
+id   12    1        
 
 
 -------------------------------------------------------------------------------
@@ -877,17 +877,22 @@ Summary for Variable AXI_WLAST
 
 
 CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
-User Defined Bins 2        0         2       100.00  
+User Defined Bins 2        1         1       50.00   
 
 
 User Defined Bins for AXI_WLAST
 
 
-Bins
+Uncovered bins
+
+NAME    COUNT AT LEAST NUMBER 
+wlast_1 0     1        1      
+
+
+Covered bins
 
 NAME    COUNT AT LEAST 
-wlast_0 20    1        
-wlast_1 4     1        
+wlast_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -905,7 +910,7 @@ User Defined Bins for AXI_BID
 Bins
 
 NAME COUNT AT LEAST 
-id   24    1        
+id   12    1        
 
 
 -------------------------------------------------------------------------------
@@ -929,7 +934,7 @@ bresp_1 0     1        1
 Covered bins
 
 NAME    COUNT AT LEAST 
-bresp_0 24    1        
+bresp_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -947,7 +952,7 @@ User Defined Bins for AXI_ARID
 Bins
 
 NAME COUNT AT LEAST 
-id   24    1        
+id   12    1        
 
 
 -------------------------------------------------------------------------------
@@ -965,7 +970,7 @@ User Defined Bins for AXI_ARADDR
 Bins
 
 NAME       COUNT AT LEAST 
-valid_addr 24    1        
+valid_addr 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -983,7 +988,7 @@ User Defined Bins for AXI_ARLEN
 Bins
 
 NAME  COUNT AT LEAST 
-ARLEN 20    1        
+ARLEN 11    1        
 
 
 -------------------------------------------------------------------------------
@@ -1001,7 +1006,7 @@ User Defined Bins for AXI_ARSIZE
 Bins
 
 NAME   COUNT AT LEAST 
-ARSIZE 24    1        
+ARSIZE 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1019,7 +1024,7 @@ User Defined Bins for AXI_ARBURST
 Bins
 
 NAME    COUNT AT LEAST 
-ARBURST 24    1        
+ARBURST 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1037,7 +1042,7 @@ User Defined Bins for AXI_RID
 Bins
 
 NAME COUNT AT LEAST 
-id   24    1        
+id   12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1061,7 +1066,7 @@ rlast_1 0     1        1
 Covered bins
 
 NAME    COUNT AT LEAST 
-rlast_0 24    1        
+rlast_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1069,13 +1074,13 @@ rlast_0 24    1
 Group Instance : top.me.obj.axi_cg
 ===============================================================================
 SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
- 93.75 1      100    1        64           64            
+ 90.62 1      100    1        64           64            
 
 
 Group:
 
 SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                        
- 93.75  93.75    1      100    1        1            64           64                    top_pkg::scoreboard::axi_cg 
+ 90.62  90.62    1      100    1        1            64           64                    top_pkg::scoreboard::axi_cg 
 
 
 
@@ -1086,7 +1091,7 @@ Summary for Group Instance   top.me.obj.axi_cg
 
 
 CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
-Variables 19       2         17      93.75   
+Variables 19       3         16      90.62   
 
 
 Variables for Group Instance  top.me.obj.axi_cg
@@ -1099,7 +1104,7 @@ AXI_AWLEN   1        0         1       100.00  100  1      1        0
 AXI_AWSIZE  1        0         1       100.00  100  1      1        0                    
 AXI_AWBURST 1        0         1       100.00  100  1      1        0                    
 AXI_WID     1        0         1       100.00  100  1      1        0                    
-AXI_WLAST   2        0         2       100.00  100  1      1        0                    
+AXI_WLAST   2        1         1       50.00   100  1      1        0                    
 AXI_BID     1        0         1       100.00  100  1      1        0                    
 AXI_BRESP   2        1         1       50.00   100  1      1        0                    
 AXI_ARID    1        0         1       100.00  100  1      1        0                    
@@ -1126,7 +1131,7 @@ User Defined Bins for AXI_AWID
 Bins
 
 NAME COUNT AT LEAST 
-id   24    1        
+id   12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1144,7 +1149,7 @@ User Defined Bins for AXI_AWADDR
 Bins
 
 NAME       COUNT AT LEAST 
-valid_addr 24    1        
+valid_addr 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1162,7 +1167,7 @@ User Defined Bins for AXI_AWLEN
 Bins
 
 NAME  COUNT AT LEAST 
-AWLEN 24    1        
+AWLEN 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1180,7 +1185,7 @@ User Defined Bins for AXI_AWSIZE
 Bins
 
 NAME   COUNT AT LEAST 
-AWSIZE 24    1        
+AWSIZE 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1198,7 +1203,7 @@ User Defined Bins for AXI_AWBURST
 Bins
 
 NAME    COUNT AT LEAST 
-AWBURST 24    1        
+AWBURST 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1216,7 +1221,7 @@ User Defined Bins for AXI_WID
 Bins
 
 NAME COUNT AT LEAST 
-id   24    1        
+id   12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1225,17 +1230,22 @@ Summary for Variable AXI_WLAST
 
 
 CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
-User Defined Bins 2        0         2       100.00  
+User Defined Bins 2        1         1       50.00   
 
 
 User Defined Bins for AXI_WLAST
 
 
-Bins
+Uncovered bins
+
+NAME    COUNT AT LEAST NUMBER 
+wlast_1 0     1        1      
+
+
+Covered bins
 
 NAME    COUNT AT LEAST 
-wlast_0 20    1        
-wlast_1 4     1        
+wlast_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1253,7 +1263,7 @@ User Defined Bins for AXI_BID
 Bins
 
 NAME COUNT AT LEAST 
-id   24    1        
+id   12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1277,7 +1287,7 @@ bresp_1 0     1        1
 Covered bins
 
 NAME    COUNT AT LEAST 
-bresp_0 24    1        
+bresp_0 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1295,7 +1305,7 @@ User Defined Bins for AXI_ARID
 Bins
 
 NAME COUNT AT LEAST 
-id   24    1        
+id   12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1313,7 +1323,7 @@ User Defined Bins for AXI_ARADDR
 Bins
 
 NAME       COUNT AT LEAST 
-valid_addr 24    1        
+valid_addr 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1331,7 +1341,7 @@ User Defined Bins for AXI_ARLEN
 Bins
 
 NAME  COUNT AT LEAST 
-ARLEN 20    1        
+ARLEN 11    1        
 
 
 -------------------------------------------------------------------------------
@@ -1349,7 +1359,7 @@ User Defined Bins for AXI_ARSIZE
 Bins
 
 NAME   COUNT AT LEAST 
-ARSIZE 24    1        
+ARSIZE 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1367,7 +1377,7 @@ User Defined Bins for AXI_ARBURST
 Bins
 
 NAME    COUNT AT LEAST 
-ARBURST 24    1        
+ARBURST 12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1385,7 +1395,7 @@ User Defined Bins for AXI_RID
 Bins
 
 NAME COUNT AT LEAST 
-id   24    1        
+id   12    1        
 
 
 -------------------------------------------------------------------------------
@@ -1409,7 +1419,7 @@ rlast_1 0     1        1
 Covered bins
 
 NAME    COUNT AT LEAST 
-rlast_0 24    1        
+rlast_0 12    1        
 
 
 Group : top_pkg::scoreboard::ahb_rst_cg
@@ -1464,9 +1474,9 @@ User Defined Bins for AHB_RSTN
 
 Bins
 
-NAME   COUNT AT LEAST 
-RSTN_0 4     1        
-RSTN_1 218   1        
+NAME   COUNT  AT LEAST 
+RSTN_0 4      1        
+RSTN_1 338078 1        
 
 
 -------------------------------------------------------------------------------
@@ -1515,9 +1525,9 @@ User Defined Bins for AHB_RSTN
 
 Bins
 
-NAME   COUNT AT LEAST 
-RSTN_0 4     1        
-RSTN_1 218   1        
+NAME   COUNT  AT LEAST 
+RSTN_0 4      1        
+RSTN_1 338078 1        
 
 
 Group : top_pkg::scoreboard::axi_rst_cg
@@ -1572,9 +1582,9 @@ User Defined Bins for AXI_RSTN
 
 Bins
 
-NAME   COUNT AT LEAST 
-RSTN_0 4     1        
-RSTN_1 218   1        
+NAME   COUNT  AT LEAST 
+RSTN_0 4      1        
+RSTN_1 338077 1        
 
 
 -------------------------------------------------------------------------------
@@ -1623,8 +1633,8 @@ User Defined Bins for AXI_RSTN
 
 Bins
 
-NAME   COUNT AT LEAST 
-RSTN_0 4     1        
-RSTN_1 218   1        
+NAME   COUNT  AT LEAST 
+RSTN_0 4      1        
+RSTN_1 338077 1        
 
 

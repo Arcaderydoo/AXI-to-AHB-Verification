@@ -1,8 +1,8 @@
 Command: /home2/B126/AKSSolomon/VLSI_RN_OFFLINE/AXI2AHB_Bridge/sim/./simv -l ahbnormaltest.log +UVM_TESTNAME=AHB_normal_test +fsdbfile+axiahb.fsdb +ntb_random_seed_automatic -cm_dir ./ahbnormal_data
 Chronologic VCS simulator copyright 1991-2025
 Contains Synopsys proprietary information.
-Compiler version X-2025.06_Full64; Runtime version X-2025.06_Full64;  Aug  1 18:15 2026
-NOTE: automatic random seed used: 3582241151
+Compiler version X-2025.06_Full64; Runtime version X-2025.06_Full64;  Aug  1 19:14 2026
+NOTE: automatic random seed used: 1219473928
 ----------------------------------------------------------------
 UVM-1.1d.Synopsys
 (C) 2007-2013 Mentor Graphics Corporation
@@ -187,10 +187,10 @@ req        AHB_xtn   -     @1795
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
   HREADY   integral  1     'b1               
-  HRDATA   integral  64    'he19149e85956cc80
+  HRDATA   integral  64    'h58107bf28acf6c11
   HRESP    integral  1     'b0               
-  HGRANT   integral  1     'b1               
-  HMASTER  integral  4     'hd               
+  HGRANT   integral  1     'b0               
+  HMASTER  integral  4     'h3               
 ---------------------------------------------
 UVM_INFO ../AXI_agt/AXI_driver.sv(56) @ 35: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] aw_channel method started
 UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 45: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
@@ -207,17 +207,17 @@ req        AHB_xtn   -     @1795
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
   HREADY   integral  1     'b0               
-  HRDATA   integral  64    'h23435342739daaa2
-  HRESP    integral  1     'b1               
+  HRDATA   integral  64    'hd819eae83123fc10
+  HRESP    integral  1     'b0               
   HGRANT   integral  1     'b0               
-  HMASTER  integral  4     'h2               
+  HMASTER  integral  4     'h1               
 ---------------------------------------------
 UVM_INFO ../AXI_agt/AXI_monitor.sv(119) @ 46: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] AW Channel - WRITE DATA in AXI MONITOR
 --------------------------------
 Name       Type      Size  Value
 --------------------------------
 aw_xtn     AXI_xtn   -     @1659
-  AWID     integral  8     'd35 
+  AWID     integral  8     159  
   AWADDR   integral  32    'h7d0
   AWLEN    integral  8     'd4  
   AWSIZE   integral  3     'd0  
@@ -247,37 +247,37 @@ aw_xtn     AXI_xtn   -     @1659
 UVM_INFO ../tb/scoreboard.sv(123) @ 46: uvm_test_top.env.sbh[0] [scoreboard] got axi data
 UVM_INFO ../AXI_agt/AXI_monitor.sv(57) @ 55: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] AW Channel method ended
 UVM_INFO ../AXI_agt/AXI_monitor.sv(201) @ 55: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] AR CHANNEL - READ DATA in AXI MONITOR
--------------------------------------
-Name       Type      Size  Value     
--------------------------------------
-ar_xtn     AXI_xtn   -     @1663     
-  AWID     integral  8     'd0       
-  AWADDR   integral  32    'h0       
-  AWLEN    integral  8     'd0       
-  AWSIZE   integral  3     'd0       
-  AWBURST  integral  2     'd0       
-  AWVALID  integral  1     'b0       
-  AWREADY  integral  1     'b0       
-  WID      integral  8     'd0       
-  WLAST    integral  1     'b0       
-  WVALID   integral  1     'b0       
-  WREADY   integral  1     'b0       
-  BID      integral  8     'd0       
-  BRESP    integral  1     'b0       
-  BVALID   integral  1     'b0       
-  BREADY   integral  1     'b0       
-  ARID     integral  8     236       
-  ARADDR   integral  32    4270712143
-  ARLEN    integral  8     'd4       
-  ARSIZE   integral  3     'd0       
-  ARBURST  integral  2     2         
-  ARVALID  integral  1     'b1       
-  ARREADY  integral  1     'b1       
-  RID      integral  8     'd0       
-  RLAST    integral  1     'b0       
-  RVALID   integral  1     'b0       
-  RREADY   integral  1     'b0       
--------------------------------------
+--------------------------------------
+Name       Type      Size  Value      
+--------------------------------------
+ar_xtn     AXI_xtn   -     @1663      
+  AWID     integral  8     'd0        
+  AWADDR   integral  32    'h0        
+  AWLEN    integral  8     'd0        
+  AWSIZE   integral  3     'd0        
+  AWBURST  integral  2     'd0        
+  AWVALID  integral  1     'b0        
+  AWREADY  integral  1     'b0        
+  WID      integral  8     'd0        
+  WLAST    integral  1     'b0        
+  WVALID   integral  1     'b0        
+  WREADY   integral  1     'b0        
+  BID      integral  8     'd0        
+  BRESP    integral  1     'b0        
+  BVALID   integral  1     'b0        
+  BREADY   integral  1     'b0        
+  ARID     integral  8     134        
+  ARADDR   integral  32    'd208423381
+  ARLEN    integral  8     'd4        
+  ARSIZE   integral  3     'd0        
+  ARBURST  integral  2     2          
+  ARVALID  integral  1     'b1        
+  ARREADY  integral  1     'b1        
+  RID      integral  8     'd0        
+  RLAST    integral  1     'b0        
+  RVALID   integral  1     'b0        
+  RREADY   integral  1     'b0        
+--------------------------------------
 UVM_INFO ../AXI_agt/AXI_monitor.sv(85) @ 55: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] AR Channel method ended
 UVM_INFO ../AXI_agt/AXI_monitor.sv(65) @ 55: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] W Channel method started
 UVM_INFO ../tb/scoreboard.sv(123) @ 55: uvm_test_top.env.sbh[0] [scoreboard] got axi data
@@ -295,11 +295,11 @@ req        AHB_xtn   -     @1795
   HWDATA   integral  64    'h0               
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b1               
-  HRDATA   integral  64    'hfb7e6f7a14c01291
+  HREADY   integral  1     'b0               
+  HRDATA   integral  64    'h686e01042b3d0ae4
   HRESP    integral  1     'b1               
-  HGRANT   integral  1     'b0               
-  HMASTER  integral  4     'h5               
+  HGRANT   integral  1     'b1               
+  HMASTER  integral  4     'h8               
 ---------------------------------------------
 UVM_INFO ../AXI_agt/AXI_driver.sv(58) @ 65: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] aw_channel method ended
 UVM_INFO ../AXI_agt/AXI_driver.sv(66) @ 65: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] w_channel method started
@@ -317,10 +317,10 @@ req        AHB_xtn   -     @1795
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
   HREADY   integral  1     'b1               
-  HRDATA   integral  64    'ha50868150c91ab6d
-  HRESP    integral  1     'b1               
+  HRDATA   integral  64    'h6d476e4b10eced63
+  HRESP    integral  1     'b0               
   HGRANT   integral  1     'b0               
-  HMASTER  integral  4     'h3               
+  HMASTER  integral  4     'hd               
 ---------------------------------------------
 UVM_INFO ../tb/scoreboard.sv(143) @ 75: uvm_test_top.env.sbh[0] [scoreboard] got data for wdata queue
 UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 75: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
@@ -336,11 +336,11 @@ req        AHB_xtn   -     @1795
   HWDATA   integral  64    'h0               
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b0               
-  HRDATA   integral  64    'h7126971776ccb91e
+  HREADY   integral  1     'b1               
+  HRDATA   integral  64    'hfcc8ede702a5d9f8
   HRESP    integral  1     'b0               
-  HGRANT   integral  1     'b1               
-  HMASTER  integral  4     'h4               
+  HGRANT   integral  1     'b0               
+  HMASTER  integral  4     'he               
 ---------------------------------------------
 UVM_INFO ../tb/scoreboard.sv(143) @ 85: uvm_test_top.env.sbh[0] [scoreboard] got data for wdata queue
 UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 85: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
@@ -356,11 +356,11 @@ req        AHB_xtn   -     @1795
   HWDATA   integral  64    'h0               
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b1               
-  HRDATA   integral  64    'h37d5601e35a19c47
+  HREADY   integral  1     'b0               
+  HRDATA   integral  64    'h78dfe982d32ffdaa
   HRESP    integral  1     'b1               
   HGRANT   integral  1     'b1               
-  HMASTER  integral  4     'h9               
+  HMASTER  integral  4     'h4               
 ---------------------------------------------
 UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 95: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
 ---------------------------------------------
@@ -376,10 +376,10 @@ req        AHB_xtn   -     @1795
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
   HREADY   integral  1     'b1               
-  HRDATA   integral  64    'h67b13cd77cc3c137
+  HRDATA   integral  64    'hdd9b5f733043a51f
   HRESP    integral  1     'b0               
-  HGRANT   integral  1     'b0               
-  HMASTER  integral  4     'hc               
+  HGRANT   integral  1     'b1               
+  HMASTER  integral  4     'h0               
 ---------------------------------------------
 UVM_INFO ../tb/scoreboard.sv(143) @ 105: uvm_test_top.env.sbh[0] [scoreboard] got data for wdata queue
 UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 105: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
@@ -396,10 +396,10 @@ req        AHB_xtn   -     @1795
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
   HREADY   integral  1     'b0               
-  HRDATA   integral  64    'h87106da48e14557f
-  HRESP    integral  1     'b1               
+  HRDATA   integral  64    'h6c2f1a312dfd51e1
+  HRESP    integral  1     'b0               
   HGRANT   integral  1     'b0               
-  HMASTER  integral  4     'h2               
+  HMASTER  integral  4     'h0               
 ---------------------------------------------
 UVM_INFO ../tb/scoreboard.sv(143) @ 115: uvm_test_top.env.sbh[0] [scoreboard] got data for wdata queue
 UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 115: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
@@ -415,11 +415,11 @@ req        AHB_xtn   -     @1795
   HWDATA   integral  64    'h0               
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b1               
-  HRDATA   integral  64    'h8373eb4397e9bb21
-  HRESP    integral  1     'b0               
+  HREADY   integral  1     'b0               
+  HRDATA   integral  64    'he4a792e6f43fc266
+  HRESP    integral  1     'b1               
   HGRANT   integral  1     'b1               
-  HMASTER  integral  4     'h0               
+  HMASTER  integral  4     'h6               
 ---------------------------------------------
 UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 125: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
 ---------------------------------------------
@@ -434,53 +434,31 @@ req        AHB_xtn   -     @1795
   HWDATA   integral  64    'h0               
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b0               
-  HRDATA   integral  64    'he037300f6ba078ef
+  HREADY   integral  1     'b1               
+  HRDATA   integral  64    'ha0fdcde63ae8b0db
   HRESP    integral  1     'b1               
-  HGRANT   integral  1     'b1               
-  HMASTER  integral  4     'hd               
+  HGRANT   integral  1     'b0               
+  HMASTER  integral  4     'hc               
 ---------------------------------------------
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 135: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 135: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "--------------------------------
-Name       Type      Size  Value
---------------------------------
-ahb_xtn    AHB_xtn   -     @1635
-  HADDR    integral  32    'h0  
-  HWRITE   integral  1     'b0  
-  HTRANS   integral  2     'b10 
-  HSIZE    integral  3     'd0  
-  HBURST   integral  3     'd0  
-  HWDATA   integral  64    'h0  
-  HBUSREQ  integral  1     'b0  
-  HLOCK    integral  1     'b0  
-  HREADY   integral  1     'b1  
-  HRDATA   integral  64    'h0  
-  HRESP    integral  1     'b0  
-  HGRANT   integral  1     'b0  
-  HMASTER  integral  4     'h0  
---------------------------------
-"
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 135: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 135: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
 UVM_INFO ../AXI_agt/AXI_monitor.sv(161) @ 135: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] W Channel - WRITE DATA in AXI MONITOR
 ----------------------------------------------
 Name        Type      Size  Value             
 ----------------------------------------------
 aw_xtn      AXI_xtn   -     @1659             
-  AWID      integral  8     'd35              
+  AWID      integral  8     159               
   AWADDR    integral  32    'h7d0             
   AWLEN     integral  8     'd4               
   AWSIZE    integral  3     'd0               
   AWBURST   integral  2     2                 
   AWVALID   integral  1     'b1               
   AWREADY   integral  1     'b1               
-  WID       integral  8     'd35              
-  WDATA[0]  integral  64    'hdd188b652b4b7053
-  WDATA[1]  integral  64    'hdd188b652b4b7053
-  WDATA[2]  integral  64    'hf6912d1a639aa9dd
-  WDATA[3]  integral  64    'hf6912d1a639aa9dd
-  WDATA[4]  integral  64    'hc7815a6d800ddfe0
+  WID       integral  8     159               
+  WDATA[0]  integral  64    'h7b5963e09c5e3cf7
+  WDATA[1]  integral  64    'h7b5963e09c5e3cf7
+  WDATA[2]  integral  64    'h9e554043692a34e4
+  WDATA[3]  integral  64    'h9e554043692a34e4
+  WDATA[4]  integral  64    'hd520323df22102a6
   WSTRB[0]  integral  8     'b1               
   WSTRB[1]  integral  8     'b1               
   WSTRB[2]  integral  8     'b10              
@@ -506,8 +484,6 @@ aw_xtn      AXI_xtn   -     @1659
   RREADY    integral  1     'b0               
 ----------------------------------------------
 UVM_INFO ../AXI_agt/AXI_monitor.sv(67) @ 135: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] W Channel method ended
-UVM_INFO ../tb/scoreboard.sv(135) @ 135: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
-UVM_INFO ../tb/scoreboard.sv(200) @ 135: uvm_test_top.env.sbh[0] [scoreboard] waiting for rdata queue
 UVM_INFO ../tb/scoreboard.sv(143) @ 135: uvm_test_top.env.sbh[0] [scoreboard] got data for wdata queue
 UVM_INFO ../tb/scoreboard.sv(123) @ 135: uvm_test_top.env.sbh[0] [scoreboard] got axi data
 UVM_INFO ../AXI_agt/AXI_monitor.sv(75) @ 135: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] B Channel method started
@@ -525,16 +501,16 @@ req        AHB_xtn   -     @1795
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
   HREADY   integral  1     'b0               
-  HRDATA   integral  64    'hd9f13b13293c7516
-  HRESP    integral  1     'b1               
+  HRDATA   integral  64    'h56ba3a9e18c193d2
+  HRESP    integral  1     'b0               
   HGRANT   integral  1     'b1               
   HMASTER  integral  4     'h3               
 ---------------------------------------------
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 145: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
+UVM_INFO ../AHB_agt/AHB_monitor.sv(61) @ 145: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
  "---------------------------------------------
 Name       Type      Size  Value             
 ---------------------------------------------
-ahb_xtn    AHB_xtn   -     @1848             
+ahb_xtn    AHB_xtn   -     @1635             
   HADDR    integral  32    'h0               
   HWRITE   integral  1     'b0               
   HTRANS   integral  2     'b10              
@@ -544,7 +520,7 @@ ahb_xtn    AHB_xtn   -     @1848
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
   HREADY   integral  1     'b1               
-  HRDATA   integral  64    'hd9f13b13293c7516
+  HRDATA   integral  64    'h56ba3a9e18c193d2
   HRESP    integral  1     'b0               
   HGRANT   integral  1     'b0               
   HMASTER  integral  4     'h0               
@@ -552,6 +528,8 @@ ahb_xtn    AHB_xtn   -     @1848
 "
 UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 145: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 145: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
+UVM_INFO ../tb/scoreboard.sv(135) @ 145: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
+UVM_INFO ../tb/scoreboard.sv(200) @ 145: uvm_test_top.env.sbh[0] [scoreboard] waiting for rdata queue
 UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 145: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
 ---------------------------------------------
 Name       Type      Size  Value             
@@ -565,34 +543,12 @@ req        AHB_xtn   -     @1795
   HWDATA   integral  64    'h0               
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b0               
-  HRDATA   integral  64    'hcaa81025f03606c6
-  HRESP    integral  1     'b1               
-  HGRANT   integral  1     'b1               
-  HMASTER  integral  4     'hc               
----------------------------------------------
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 155: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "---------------------------------------------
-Name       Type      Size  Value             
----------------------------------------------
-ahb_xtn    AHB_xtn   -     @1860             
-  HADDR    integral  32    'h0               
-  HWRITE   integral  1     'b0               
-  HTRANS   integral  2     'b10              
-  HSIZE    integral  3     'd0               
-  HBURST   integral  3     'd0               
-  HWDATA   integral  64    'h0               
-  HBUSREQ  integral  1     'b0               
-  HLOCK    integral  1     'b0               
   HREADY   integral  1     'b1               
-  HRDATA   integral  64    'hcaa81025f03606c6
+  HRDATA   integral  64    'h499ec904bedcfb6b
   HRESP    integral  1     'b0               
-  HGRANT   integral  1     'b0               
-  HMASTER  integral  4     'h0               
+  HGRANT   integral  1     'b1               
+  HMASTER  integral  4     'h5               
 ---------------------------------------------
-"
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 155: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 155: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
 UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 155: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
 ---------------------------------------------
 Name       Type      Size  Value             
@@ -607,90 +563,64 @@ req        AHB_xtn   -     @1795
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
   HREADY   integral  1     'b1               
-  HRDATA   integral  64    'h958554ae21a194d6
-  HRESP    integral  1     'b1               
+  HRDATA   integral  64    'h8dfcbf4dd1b2642e
+  HRESP    integral  1     'b0               
   HGRANT   integral  1     'b0               
-  HMASTER  integral  4     'h9               
+  HMASTER  integral  4     'h7               
 ---------------------------------------------
-UVM_INFO ../AHB_agt/AHB_monitor.sv(43) @ 165: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(45) @ 165: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 165: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "---------------------------------
-Name       Type      Size  Value 
----------------------------------
-ahb_xtn    AHB_xtn   -     @1864 
-  HADDR    integral  32    'h7d0 
-  HWRITE   integral  1     'b1   
-  HTRANS   integral  2     'b10  
-  HSIZE    integral  3     'd0   
-  HBURST   integral  3     'd0   
-  HWDATA   integral  64    'ha900
-  HBUSREQ  integral  1     'b0   
-  HLOCK    integral  1     'b0   
-  HREADY   integral  1     'b1   
-  HRDATA   integral  64    'h0   
-  HRESP    integral  1     'b0   
-  HGRANT   integral  1     'b0   
-  HMASTER  integral  4     'h0   
----------------------------------
+UVM_INFO ../AHB_agt/AHB_monitor.sv(61) @ 165: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
+ "---------------------------------------------
+Name       Type      Size  Value             
+---------------------------------------------
+ahb_xtn    AHB_xtn   -     @1856             
+  HADDR    integral  32    'h0               
+  HWRITE   integral  1     'b0               
+  HTRANS   integral  2     'b10              
+  HSIZE    integral  3     'd0               
+  HBURST   integral  3     'd0               
+  HWDATA   integral  64    'h0               
+  HBUSREQ  integral  1     'b0               
+  HLOCK    integral  1     'b0               
+  HREADY   integral  1     'b1               
+  HRDATA   integral  64    'h499ec904bedcfb6b
+  HRESP    integral  1     'b0               
+  HGRANT   integral  1     'b0               
+  HMASTER  integral  4     'h0               
+---------------------------------------------
 "
 UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 165: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 165: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(43) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(45) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "---------------------------------
-Name       Type      Size  Value 
----------------------------------
-ahb_xtn    AHB_xtn   -     @1872 
-  HADDR    integral  32    'h7d1 
-  HWRITE   integral  1     'b1   
-  HTRANS   integral  2     'b10  
-  HSIZE    integral  3     'd0   
-  HBURST   integral  3     'd0   
-  HWDATA   integral  64    'ha900
-  HBUSREQ  integral  1     'b0   
-  HLOCK    integral  1     'b0   
-  HREADY   integral  1     'b1   
-  HRDATA   integral  64    'h0   
-  HRESP    integral  1     'b0   
-  HGRANT   integral  1     'b0   
-  HMASTER  integral  4     'h0   
----------------------------------
-"
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(43) @ 185: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(45) @ 185: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 185: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "----------------------------------
-Name       Type      Size  Value  
-----------------------------------
-ahb_xtn    AHB_xtn   -     @1876  
-  HADDR    integral  32    'h7d1  
-  HWRITE   integral  1     'b1    
-  HTRANS   integral  2     'b10   
-  HSIZE    integral  3     'd0    
-  HBURST   integral  3     'd0    
-  HWDATA   integral  64    'hd0000
-  HBUSREQ  integral  1     'b0    
-  HLOCK    integral  1     'b0    
-  HREADY   integral  1     'b1    
-  HRDATA   integral  64    'h0    
-  HRESP    integral  1     'b0    
-  HGRANT   integral  1     'b0    
-  HMASTER  integral  4     'h0    
-----------------------------------
+UVM_INFO ../AHB_agt/AHB_monitor.sv(61) @ 185: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
+ "-----------------------------------
+Name       Type      Size  Value   
+-----------------------------------
+ahb_xtn    AHB_xtn   -     @1864   
+  HADDR    integral  32    'h7d1   
+  HWRITE   integral  1     'b1     
+  HTRANS   integral  2     'b10    
+  HSIZE    integral  3     'd0     
+  HBURST   integral  3     'd0     
+  HWDATA   integral  64    'h210000
+  HBUSREQ  integral  1     'b0     
+  HLOCK    integral  1     'b0     
+  HREADY   integral  1     'b1     
+  HRDATA   integral  64    'h0     
+  HRESP    integral  1     'b0     
+  HGRANT   integral  1     'b0     
+  HMASTER  integral  4     'h0     
+-----------------------------------
 "
 UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 185: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 185: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(43) @ 195: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(45) @ 195: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 195: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
+UVM_INFO ../AHB_agt/AHB_monitor.sv(61) @ 205: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
  "--------------------------------
 Name       Type      Size  Value
 --------------------------------
-ahb_xtn    AHB_xtn   -     @1884
+ahb_xtn    AHB_xtn   -     @1872
   HADDR    integral  32    'h7d2
   HWRITE   integral  1     'b1  
   HTRANS   integral  2     'b10 
@@ -706,15 +636,26 @@ ahb_xtn    AHB_xtn   -     @1884
   HMASTER  integral  4     'h0  
 --------------------------------
 "
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 195: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
+UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 205: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
 UVM_INFO ../AXI_agt/AXI_driver.sv(68) @ 215: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] w_channel method ended
 UVM_INFO ../AXI_agt/AXI_driver.sv(76) @ 215: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] b_channel method started
+UVM_INFO ../tb/scoreboard.sv(209) @ 215: uvm_test_top.env.sbh[0] [scoreboard] DATA MISMATCH :(, axi_rdata = 499ec904bedcfb6b, ahb_rdata = 56ba3a9e18c193d2
+UVM_INFO ../tb/scoreboard.sv(135) @ 215: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
+UVM_INFO ../tb/scoreboard.sv(200) @ 215: uvm_test_top.env.sbh[0] [scoreboard] waiting for rdata queue
+UVM_INFO ../tb/scoreboard.sv(205) @ 225: uvm_test_top.env.sbh[0] [scoreboard] DATA MATCH :)
+UVM_INFO ../tb/scoreboard.sv(135) @ 225: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
+UVM_INFO ../tb/scoreboard.sv(186) @ 225: uvm_test_top.env.sbh[0] [scoreboard] waiting for wdata queue
+UVM_INFO ../tb/scoreboard.sv(195) @ 225: uvm_test_top.env.sbh[0] [scoreboard] DATA MISMATCH :(, axi_wdata = f7, ahb_wdata = 210000
+UVM_INFO ../tb/scoreboard.sv(135) @ 225: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
+UVM_INFO ../tb/scoreboard.sv(186) @ 225: uvm_test_top.env.sbh[0] [scoreboard] waiting for wdata queue
+UVM_INFO ../tb/scoreboard.sv(195) @ 225: uvm_test_top.env.sbh[0] [scoreboard] DATA MISMATCH :(, axi_wdata = f7, ahb_wdata = 0
 UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 235: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 235: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
+UVM_INFO ../AXI_agt/AXI_driver.sv(140) @ 235: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] Inside b_channel driving logic - waiting for bvalid
+UVM_INFO ../AHB_agt/AHB_monitor.sv(61) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
  "---------------------------------------------
 Name       Type      Size  Value             
 ---------------------------------------------
-ahb_xtn    AHB_xtn   -     @1888             
+ahb_xtn    AHB_xtn   -     @1880             
   HADDR    integral  32    'h0               
   HWRITE   integral  1     'b0               
   HTRANS   integral  2     'b10              
@@ -724,16 +665,17 @@ ahb_xtn    AHB_xtn   -     @1888
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
   HREADY   integral  1     'b1               
-  HRDATA   integral  64    'hcaa81025f03606c6
+  HRDATA   integral  64    'h499ec904bedcfb6b
   HRESP    integral  1     'b0               
   HGRANT   integral  1     'b0               
   HMASTER  integral  4     'h0               
 ---------------------------------------------
 "
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 235: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 235: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../AXI_agt/AXI_driver.sv(140) @ 235: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] Inside b_channel driving logic - waiting for bvalid
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
+UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
+UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
+UVM_INFO ../tb/scoreboard.sv(135) @ 245: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
+UVM_INFO ../tb/scoreboard.sv(200) @ 245: uvm_test_top.env.sbh[0] [scoreboard] waiting for rdata queue
+UVM_INFO ../AHB_agt/AHB_monitor.sv(61) @ 265: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
  "---------------------------------------------
 Name       Type      Size  Value             
 ---------------------------------------------
@@ -747,73 +689,21 @@ ahb_xtn    AHB_xtn   -     @1900
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
   HREADY   integral  1     'b1               
-  HRDATA   integral  64    'hcaa81025f03606c6
+  HRDATA   integral  64    'h499ec904bedcfb6b
   HRESP    integral  1     'b0               
   HGRANT   integral  1     'b0               
   HMASTER  integral  4     'h0               
 ---------------------------------------------
-"
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../tb/scoreboard.sv(209) @ 245: uvm_test_top.env.sbh[0] [scoreboard] DATA MISMATCH :(, axi_rdata = caa81025f03606c6, ahb_rdata = 0
-UVM_INFO ../tb/scoreboard.sv(135) @ 245: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
-UVM_INFO ../tb/scoreboard.sv(200) @ 245: uvm_test_top.env.sbh[0] [scoreboard] waiting for rdata queue
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 255: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "---------------------------------------------
-Name       Type      Size  Value             
----------------------------------------------
-ahb_xtn    AHB_xtn   -     @1912             
-  HADDR    integral  32    'h0               
-  HWRITE   integral  1     'b0               
-  HTRANS   integral  2     'b10              
-  HSIZE    integral  3     'd0               
-  HBURST   integral  3     'd0               
-  HWDATA   integral  64    'h0               
-  HBUSREQ  integral  1     'b0               
-  HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b1               
-  HRDATA   integral  64    'hcaa81025f03606c6
-  HRESP    integral  1     'b0               
-  HGRANT   integral  1     'b0               
-  HMASTER  integral  4     'h0               
----------------------------------------------
-"
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 255: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 255: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../tb/scoreboard.sv(209) @ 255: uvm_test_top.env.sbh[0] [scoreboard] DATA MISMATCH :(, axi_rdata = caa81025f03606c6, ahb_rdata = d9f13b13293c7516
-UVM_INFO ../tb/scoreboard.sv(135) @ 255: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
-UVM_INFO ../tb/scoreboard.sv(200) @ 255: uvm_test_top.env.sbh[0] [scoreboard] waiting for rdata queue
-UVM_INFO ../AHB_agt/AHB_monitor.sv(43) @ 265: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(45) @ 265: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 265: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "---------------------------------------
-Name       Type      Size  Value       
----------------------------------------
-ahb_xtn    AHB_xtn   -     @1920       
-  HADDR    integral  32    'h7d3       
-  HWRITE   integral  1     'b1         
-  HTRANS   integral  2     'b10        
-  HSIZE    integral  3     'd0         
-  HBURST   integral  3     'd0         
-  HWDATA   integral  64    'h7b00000000
-  HBUSREQ  integral  1     'b0         
-  HLOCK    integral  1     'b0         
-  HREADY   integral  1     'b1         
-  HRDATA   integral  64    'h0         
-  HRESP    integral  1     'b0         
-  HGRANT   integral  1     'b0         
-  HMASTER  integral  4     'h0         
----------------------------------------
 "
 UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 265: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 265: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(43) @ 275: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
 UVM_INFO ../AHB_agt/AHB_monitor.sv(45) @ 275: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(59) @ 275: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
+UVM_INFO ../AHB_agt/AHB_monitor.sv(61) @ 285: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
  "--------------------------------
 Name       Type      Size  Value
 --------------------------------
-ahb_xtn    AHB_xtn   -     @1928
+ahb_xtn    AHB_xtn   -     @1908
   HADDR    integral  32    'h7d4
   HWRITE   integral  1     'b1  
   HTRANS   integral  2     'b10 
@@ -829,11 +719,11 @@ ahb_xtn    AHB_xtn   -     @1928
   HMASTER  integral  4     'h0  
 --------------------------------
 "
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 275: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-Interrupt at time 47728055
+UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 285: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
+Interrupt at time 4769435
 
 exit
             V C S   S i m u l a t i o n   R e p o r t 
-Time: 47728055 ns
-CPU Time:     36.060 seconds;       Data structure size:   0.8Mb
-Sat Aug  1 18:16:26 2026
+Time: 4769435 ns
+CPU Time:      4.030 seconds;       Data structure size:   0.8Mb
+Sat Aug  1 19:15:04 2026

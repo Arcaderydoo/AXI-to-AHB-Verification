@@ -1,16 +1,14 @@
 Command: vcs -l out.log -timescale=1ns/1ns -sverilog -ntb_opts uvm -debug_access+all \
 +incdir+../AXI_agt/ +incdir+../AXI_rst_agt/ +incdir+../AHB_agt/ +incdir+../AHB_rst_agt/ \
-+incdir+../tb/ +incdir+../test/ +incdir+/home2/B126/AXI2AHB_RTL/ ../tb/top_pkg.sv \
-/home2/B126/AXI2AHB_RTL/ahb_interface.sv /home2/B126/AXI2AHB_RTL/ahb_rst_interface.sv \
-/home2/B126/AXI2AHB_RTL/axi_interface.sv /home2/B126/AXI2AHB_RTL/axi_rst_interface.sv \
-../tb/top.sv /home2/B126/AXI2AHB_RTL/addr_fifo.v /home2/B126/AXI2AHB_RTL/ahb_controller.v \
-/home2/B126/AXI2AHB_RTL/axi2ahb_bridge_top.v /home2/B126/AXI2AHB_RTL/axi2fifo.v /home2/B126/AXI2AHB_RTL/axi_controller.v \
-/home2/B126/AXI2AHB_RTL/data_fifo.v /home2/B126/AXI2AHB_RTL/fifo2axi.v /home2/B126/AXI2AHB_RTL/fifo_wrapper.v \
-/home2/B126/AXI2AHB_RTL/id_resp_fifo.v /home2/B126/AXI2AHB_RTL/id_send_fifo.v /home2/B126/AXI2AHB_RTL/rdata_fifo.v \
-/home2/B126/AXI2AHB_RTL/resp_fifo.v /home2/B126/AXI2AHB_RTL/size_fifo.v /home2/B126/AXI2AHB_RTL/write_fifo.v \
-
++incdir+../tb/ +incdir+../test/ +incdir+../AXI2AHB_RTL/ ../tb/top_pkg.sv ../AXI2AHB_RTL/ahb_interface.sv \
+../AXI2AHB_RTL/ahb_rst_interface.sv ../AXI2AHB_RTL/axi_interface.sv ../AXI2AHB_RTL/axi_rst_interface.sv \
+../tb/top.sv ../AXI2AHB_RTL/addr_fifo.v ../AXI2AHB_RTL/ahb_controller.v ../AXI2AHB_RTL/axi2ahb_bridge_top.v \
+../AXI2AHB_RTL/axi2fifo.v ../AXI2AHB_RTL/axi_controller.v ../AXI2AHB_RTL/data_fifo.v \
+../AXI2AHB_RTL/fifo2axi.v ../AXI2AHB_RTL/fifo_wrapper.v ../AXI2AHB_RTL/id_resp_fifo.v \
+../AXI2AHB_RTL/id_send_fifo.v ../AXI2AHB_RTL/rdata_fifo.v ../AXI2AHB_RTL/resp_fifo.v \
+../AXI2AHB_RTL/size_fifo.v ../AXI2AHB_RTL/write_fifo.v
                          Chronologic VCS (TM)
-         Version X-2025.06_Full64 -- Sat Aug  1 18:15:43 2026
+         Version X-2025.06_Full64 -- Sat Aug  1 19:14:51 2026
 
                     Copyright (c) 1991 - 2025 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -401,27 +399,27 @@ Parsing included file '../tb/env.sv'.
 Back to file '../tb/top_pkg.sv'.
 Parsing included file '../test/test.sv'.
 Back to file '../tb/top_pkg.sv'.
-Parsing design file '/home2/B126/AXI2AHB_RTL/ahb_interface.sv'
-Parsing design file '/home2/B126/AXI2AHB_RTL/ahb_rst_interface.sv'
-Parsing design file '/home2/B126/AXI2AHB_RTL/axi_interface.sv'
-Parsing design file '/home2/B126/AXI2AHB_RTL/axi_rst_interface.sv'
+Parsing design file '../AXI2AHB_RTL/ahb_interface.sv'
+Parsing design file '../AXI2AHB_RTL/ahb_rst_interface.sv'
+Parsing design file '../AXI2AHB_RTL/axi_interface.sv'
+Parsing design file '../AXI2AHB_RTL/axi_rst_interface.sv'
 Parsing design file '../tb/top.sv'
 Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
 Back to file '../tb/top.sv'.
-Parsing design file '/home2/B126/AXI2AHB_RTL/addr_fifo.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/ahb_controller.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/axi2ahb_bridge_top.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/axi2fifo.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/axi_controller.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/data_fifo.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/fifo2axi.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/fifo_wrapper.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/id_resp_fifo.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/id_send_fifo.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/rdata_fifo.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/resp_fifo.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/size_fifo.v'
-Parsing design file '/home2/B126/AXI2AHB_RTL/write_fifo.v'
+Parsing design file '../AXI2AHB_RTL/addr_fifo.v'
+Parsing design file '../AXI2AHB_RTL/ahb_controller.v'
+Parsing design file '../AXI2AHB_RTL/axi2ahb_bridge_top.v'
+Parsing design file '../AXI2AHB_RTL/axi2fifo.v'
+Parsing design file '../AXI2AHB_RTL/axi_controller.v'
+Parsing design file '../AXI2AHB_RTL/data_fifo.v'
+Parsing design file '../AXI2AHB_RTL/fifo2axi.v'
+Parsing design file '../AXI2AHB_RTL/fifo_wrapper.v'
+Parsing design file '../AXI2AHB_RTL/id_resp_fifo.v'
+Parsing design file '../AXI2AHB_RTL/id_send_fifo.v'
+Parsing design file '../AXI2AHB_RTL/rdata_fifo.v'
+Parsing design file '../AXI2AHB_RTL/resp_fifo.v'
+Parsing design file '../AXI2AHB_RTL/size_fifo.v'
+Parsing design file '../AXI2AHB_RTL/write_fifo.v'
 Top Level Modules:
        uvm_custom_install_recording
        uvm_custom_install_verdi_recording
@@ -429,15 +427,22 @@ Top Level Modules:
 TimeScale is 1 ns / 1 ns
 Starting vcs inline pass...
 14 modules and 0 UDP read.
-recompiling package vcs_paramclassrepository
-	However, due to incremental compilation, only 1 module needs to be compiled. 
+recompiling module uvm_custom_install_verdi_recording
+recompiling module ahb_if
+recompiling module ahb_rst_if
+recompiling module axi_if
+recompiling module axi_rst_if
+recompiling module axi2ahb_bridge_top
+recompiling module fifo_wrapper
+7 of 14 modules done
+	However, due to incremental compilation, only 7 modules need to be compiled. 
 make[1]: Entering directory '/home2/B126/AKSSolomon/VLSI_RN_OFFLINE/AXI2AHB_Bridge/sim/csrc' \
 
 rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
 if [ -x ../simv ]; then chmod a-x ../simv; fi
 g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
 -Wl,-rpath=/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/linux64/lib -L/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/linux64/lib \
--Wl,-rpath-link=./  /usr/lib64/libnuma.so.1 uvm_dpi.o uvm_verdi_dpi.o    _626165_archive_1.so \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1 uvm_dpi.o uvm_verdi_dpi.o    _649862_archive_1.so \
 _prev_archive_1.so _cuarc0.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o \
 rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs \
 -lvcsnew -lsimprofile -luclinative /home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/linux64/lib/vcs_tls.o \
@@ -448,4 +453,4 @@ _vcs_pli_stub_.o   /home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/linux
 ../simv up to date
 make[1]: Leaving directory '/home2/B126/AKSSolomon/VLSI_RN_OFFLINE/AXI2AHB_Bridge/sim/csrc' \
 
-CPU time: 6.486 seconds to compile + .353 seconds to elab + .648 seconds to link
+CPU time: 5.992 seconds to compile + .343 seconds to elab + .670 seconds to link

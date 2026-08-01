@@ -3,11 +3,11 @@
 
 TOP = ../tb/top.sv
 PKG = ../tb/top_pkg.sv
-INC = +incdir+../AXI_agt/ +incdir+../AXI_rst_agt/ +incdir+../AHB_agt/ +incdir+../AHB_rst_agt/ +incdir+../tb/ +incdir+../test/ +incdir+/home2/B126/AXI2AHB_RTL/
+INC = +incdir+../AXI_agt/ +incdir+../AXI_rst_agt/ +incdir+../AHB_agt/ +incdir+../AHB_rst_agt/ +incdir+../tb/ +incdir+../test/ +incdir+../AXI2AHB_RTL/
 
 #/home2/B126/AKSSolomon/AXI2AHB_RTL
-RTL = /home2/B126/AXI2AHB_RTL/*.v
-INTF = /home2/B126/AXI2AHB_RTL/*.sv
+RTL = ../AXI2AHB_RTL/*.v
+INTF = ../AXI2AHB_RTL/*.sv
 
 TESTNAME = AHB_normal_test
 # VCS Commands

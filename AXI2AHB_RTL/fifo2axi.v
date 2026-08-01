@@ -33,8 +33,13 @@ module fifo2axi(
 	wire fifo_empty;
 	assign fifo_empty = rdata_fifo_empty|resp_fifo_empty|id_resp_fifo_empty;
 
-	wire read_en;
-	assign read_en = (!rdata_fifo_empty)&(!resp_fifo_empty)&(!id_resp_fifo_empty)&ready;
+	wire is_write = axi_id_resp[9];
+	wire b_can_accept = (!bvalid) | bready;
+	wire r_can_accept = (!rvalid) | rready;
+	assign read_en = (!rdata_fifo_empty)&(!resp_fifo_empty)&(!id_resp_fifo_empty) & (is_write ? b_can_accept : r_can_accept);
+
+	//wire read_en;
+	//assign read_en = (!rdata_fifo_empty)&(!resp_fifo_empty)&(!id_resp_fifo_empty)&ready;
 
 	assign rdata_r_en = read_en;
 	assign resp_r_en = read_en;
