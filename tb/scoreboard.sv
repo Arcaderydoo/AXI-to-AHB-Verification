@@ -120,6 +120,7 @@ class scoreboard extends uvm_scoreboard;
 			end
 			// Get AXI data
 			forever begin
+				`uvm_info(get_type_name(), "got axi data", UVM_LOW)
 				AXI_fifoh.get(axi_xtn);
 				axi_cov = new axi_xtn;
 				axi_cg.sample();

@@ -180,7 +180,7 @@ class AHB_normal_test extends test;
 			axi_wrap_seqh.start(envh.AXI_agth[0].seqrh);
 			ahb_normal_seqh.start(envh.AHB_agth[0].seqrh);
 		join
-		#10000;
+		#1000;
 		phase.drop_objection(this);
 	endtask
 

@@ -95,8 +95,8 @@ class AXI_monitor extends uvm_monitor;
 				`uvm_info(get_type_name(), "R Channel method ended", UVM_LOW)
 				r_sem.put(1);
 			end
-		//join_any
-		join
+		join_any
+		//join
 	endtask
 
 	task aw_channel();
@@ -114,6 +114,7 @@ class AXI_monitor extends uvm_monitor;
 		aw_xtn.awaddr = axi_intf.awaddr;
 		
 		write_ch.push_back(aw_xtn);
+		AXI_mon_port.write(aw_xtn);
 		
 		`uvm_info(get_type_name(), "AW Channel - WRITE DATA in AXI MONITOR", UVM_LOW)
 		aw_xtn.print();
@@ -155,6 +156,7 @@ class AXI_monitor extends uvm_monitor;
 			end
 
 		write_ch.push_back(w_xtn);
+		AXI_mon_port.write(w_xtn);
 
 		`uvm_info(get_type_name(), "W Channel - WRITE DATA in AXI MONITOR", UVM_LOW)
 		w_xtn.print();
@@ -195,6 +197,7 @@ class AXI_monitor extends uvm_monitor;
 
 		@(axi_intf.axi_mon_cb);
 		read_ch.push_back(ar_xtn);
+		AXI_mon_port.write(ar_xtn);
 		`uvm_info(get_type_name(), "AR CHANNEL - READ DATA in AXI MONITOR", UVM_LOW)
 		ar_xtn.print();
 
