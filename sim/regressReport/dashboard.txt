@@ -1,21 +1,21 @@
 Dashboard
 
-Date: Tue Aug  4 03:03:11 2026
+Date: Tue Aug  4 03:34:06 2026
 
 User: AKSSolomon
 
 Version: X-2025.06
-Command line: urg -dir cov_data.vdb axifixed_data.vdb axiincrement_data.vdb axiwrapped_data.vdb axireadincr_data.vdb -format both -report regressReport
-Number of tests: 5
+Command line: urg -dir cov_data.vdb axifixed_data.vdb axiincrement_data.vdb axiwrapped_data.vdb axireadincr_data.vdb ahbnormal_data.vdb ahbwait_data.vdb ahberror_data.vdb -format both -report regressReport
+Number of tests: 8
 
 -------------------------------------------------------------------------------
 Total Coverage Summary 
 SCORE  GROUP  
- 86.46  86.46 
+ 96.62  96.62 
 
 
 -------------------------------------------------------------------------------
 Total Groups Coverage Summary 
 SCORE  INST SCORE WEIGHT 
- 86.46  86.46     1      
+ 96.62  96.62     1      
 

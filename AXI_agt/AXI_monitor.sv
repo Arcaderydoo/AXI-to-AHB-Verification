@@ -40,7 +40,7 @@ class AXI_monitor extends uvm_monitor;
 		if (!uvm_config_db #(virtual axi_if)::get(this, "", "AXI_if", axi_intf))
 			`uvm_fatal(get_type_name(), "cannot get axi_if in AXI_monitor")
 	endfunction
-
+/*
 task run_phase (uvm_phase phase);
     fork
         forever aw_channel();
@@ -59,13 +59,14 @@ task run_phase (uvm_phase phase);
         end
     join_none
 endtask
-/*
+*/
+
 	task run_phase (uvm_phase phase);
 		forever begin
 			collect_data();
 		end
 	endtask
-*/
+
 	task collect_data();
 		fork
 			begin

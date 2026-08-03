@@ -57,11 +57,11 @@ class AHB_wait_seqs extends AHB_base_seqs;
 
 endclass
 
-class AHB_err_seqs extends AHB_base_seqs;
+class AHB_error_seqs extends AHB_base_seqs;
 	
-	`uvm_object_utils(AHB_err_seqs)
+	`uvm_object_utils(AHB_error_seqs)
 
-	function new (string name = "AHB_err_seqs");
+	function new (string name = "AHB_error_seqs");
 		super.new(name);
 	endfunction
 

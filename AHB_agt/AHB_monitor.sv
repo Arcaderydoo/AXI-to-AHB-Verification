@@ -28,7 +28,7 @@ class AHB_monitor extends uvm_monitor;
     forever begin
         @(ahb_intf.ahb_mon_cb);
 
-        if (ahb_intf.ahb_mon_cb.hready) begin
+        if (ahb_intf.ahb_mon_cb.hready || ahb_intf.ahb_mon_cb.hresp) begin
 
             // ---- DATA PHASE of the transfer captured last cycle ----
             if (pend_xtn != null && ((ahb_intf.ahb_mon_cb.hwrite && ahb_intf.ahb_mon_cb.hwdata != 0) || (!ahb_intf.ahb_mon_cb.hwrite && !ahb_intf.ahb_mon_cb.hrdata))) begin
@@ -36,7 +36,7 @@ class AHB_monitor extends uvm_monitor;
                 pend_xtn.hrdata = ahb_intf.ahb_mon_cb.hrdata;
                 pend_xtn.hresp  = ahb_intf.ahb_mon_cb.hresp;
                 AHB_mon_port.write(pend_xtn);
-		`uvm_info(get_type_name(), $sformatf("Monitor Data: \n %p", pend_xtn.sprint()), UVM_LOW)
+								`uvm_info(get_type_name(), $sformatf("Monitor Data: \n %p", pend_xtn.sprint()), UVM_LOW)
                 pend_xtn = null;
             end
 

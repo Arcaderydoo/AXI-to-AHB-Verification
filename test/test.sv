@@ -273,3 +273,66 @@ class AXI_read_increment_test extends test;
 
 endclass
 
+class AHB_wait_test extends test;
+	
+	`uvm_component_utils(AHB_wait_test)
+
+	AXI_write_wrap_seqs axi_seqh;
+	AHB_wait_seqs ahb_seqh;
+
+	function new (string name = "AHB_wait_test", uvm_component parent);
+		super.new(name, parent);
+	endfunction
+
+	function void build_phase (uvm_phase phase);
+		super.build_phase(phase);
+		len = 3;
+		uvm_config_db #(int)::set(this, "*", "len", len);
+	endfunction
+
+	task run_phase (uvm_phase phase);
+		super.run_phase(phase);
+		axi_seqh = AXI_write_wrap_seqs::type_id::create("axi_seqh");
+		ahb_seqh = AHB_wait_seqs::type_id::create("ahb_seqh");
+		phase.raise_objection(this);
+		fork
+			axi_seqh.start(envh.AXI_agth[0].seqrh);
+			ahb_seqh.start(envh.AHB_agth[0].seqrh);
+		join
+		#300;
+		phase.drop_objection(this);
+	endtask
+
+endclass
+
+class AHB_error_test extends test;
+	
+	`uvm_component_utils(AHB_error_test)
+
+	AXI_write_wrap_seqs axi_seqh;
+	AHB_error_seqs ahb_seqh;
+
+	function new (string name = "AHB_error_test", uvm_component parent);
+		super.new(name, parent);
+	endfunction
+
+	function void build_phase (uvm_phase phase);
+		super.build_phase(phase);
+		len = 1;
+		uvm_config_db #(int)::set(this, "*", "len", len);
+	endfunction
+
+	task run_phase (uvm_phase phase);
+		super.run_phase(phase);
+		axi_seqh = AXI_write_wrap_seqs::type_id::create("axi_seqh");
+		ahb_seqh = AHB_error_seqs::type_id::create("ahb_seqh");
+		phase.raise_objection(this);
+		fork
+			axi_seqh.start(envh.AXI_agth[0].seqrh);
+			ahb_seqh.start(envh.AHB_agth[0].seqrh);
+		join
+		#300;
+		phase.drop_objection(this);
+	endtask
+
+endclass

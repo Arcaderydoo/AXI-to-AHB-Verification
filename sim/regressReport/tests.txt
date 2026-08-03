@@ -2,10 +2,10 @@ Tests
 
 Total Coverage Summary 
 SCORE  GROUP  
- 86.46  86.46 
+ 96.62  96.62 
 
 
-Total tests in report: 5
+Total tests in report: 8
 -------------------------------------------------------------------------------
 Data from the following tests was used to generate this report
 cov_data/test          
@@ -13,4 +13,7 @@ axifixed_data/test
 axiincrement_data/test 
 axiwrapped_data/test   
 axireadincr_data/test  
+ahbnormal_data/test    
+ahbwait_data/test      
+ahberror_data/test     
 
