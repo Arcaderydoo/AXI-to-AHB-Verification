@@ -92,8 +92,8 @@ class AXI_driver extends uvm_driver #(AXI_xtn);
 				r_channel(r_ch.pop_front());
 				r_sem.put(1);
 			end
-		//join_any	
-		join
+		join_any	
+		//join
 	endtask
 
 	task aw_channel (AXI_xtn xtn);

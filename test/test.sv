@@ -21,8 +21,6 @@ class test extends uvm_test;
 		
 		uvm_config_db #(env_config)::set(this, "*", "env_cfg", env_cfg);
 
-		len = 4;
-		uvm_config_db #(int)::set(this, "*", "len", len);
 		
 		envh = env::type_id::create("env", this);
 	endfunction
@@ -77,32 +75,39 @@ class AHB_rst_test extends test;
 		ahb_rst_seqh = AHB_rst_seqs::type_id::create("ahb_rst_seqh");
 		phase.raise_objection(this, get_type_name());
 		ahb_rst_seqh.start(envh.AHB_rst_agth[0].seqrh);
+		#100;
 		phase.drop_objection(this, get_type_name());
 	endtask
 
 endclass
 
-class AXI_fixed_test extends test;
+class AXI_write_fixed_test extends test;
 
-	`uvm_component_utils(AXI_fixed_test)
+	`uvm_component_utils(AXI_write_fixed_test)
 
-	AXI_fixed_seqs seqh;
+	AXI_write_fixed_seqs seqh;
 	AHB_normal_seqs ahb_bg_seqh;
 
-	function new (string name = "AXI_fixed_test", uvm_component parent);
+	function new (string name = "AXI_write_fixed_test", uvm_component parent);
 		super.new(name, parent);
+	endfunction
+
+	function void build_phase (uvm_phase phase);
+		super.build_phase(phase);
+		len = 3;
+		uvm_config_db #(int)::set(this, "*", "len", len);
 	endfunction
 
 	task run_phase (uvm_phase phase);
 		super.run_phase(phase);
-		seqh = AXI_fixed_seqs::type_id::create("seqh");
+		seqh = AXI_write_fixed_seqs::type_id::create("seqh");
 		ahb_bg_seqh = AHB_normal_seqs::type_id::create("ahb_bg_seqh");
 		phase.raise_objection(this);
 		fork
 			seqh.start(envh.AXI_agth[0].seqrh);
 			ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
 		join
-		#1000;
+		#100;
 		phase.drop_objection(this);
 	endtask
 
@@ -117,6 +122,12 @@ class AXI_increment_test extends test;
 
 	function new (string name = "AXI_increment_test", uvm_component parent);
 		super.new(name, parent);
+	endfunction
+
+	function void build_phase (uvm_phase phase);
+		super.build_phase(phase);
+		len = 7;
+		uvm_config_db #(int)::set(this, "*", "len", len);
 	endfunction
 
 	task run_phase (uvm_phase phase);
@@ -145,6 +156,12 @@ class AXI_wrapped_test extends test;
 		super.new(name, parent);
 	endfunction
 
+	function void build_phase (uvm_phase phase);
+		super.build_phase(phase);
+		len = 1;
+		uvm_config_db #(int)::set(this, "*", "len", len);
+	endfunction
+
 	task run_phase (uvm_phase phase);
 		super.run_phase(phase);
 		axi_wrap_seqh = AXI_wrap_seqs::type_id::create("axi_wrap_seqh");
@@ -169,6 +186,12 @@ class AHB_normal_test extends test;
 
 	function new (string name = "AHB_normal_test", uvm_component parent);
 		super.new(name, parent);
+	endfunction
+
+	function void build_phase (uvm_phase phase);
+		super.build_phase(phase);
+		len = 1;
+		uvm_config_db #(int)::set(this, "*", "len", len);
 	endfunction
 
 	task run_phase (uvm_phase phase);

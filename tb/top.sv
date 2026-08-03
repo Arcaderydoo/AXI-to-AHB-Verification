@@ -10,8 +10,8 @@ module top;
 
 	axi_if axi_intf (aclk);
 	axi_rst_if axi_rst_intf (aclk);
-	ahb_if ahb_intf (aclk);
-	ahb_rst_if ahb_rst_intf (aclk);
+	ahb_if ahb_intf (hclk);
+	ahb_rst_if ahb_rst_intf (hclk);
 	
 	axi2ahb_bridge_top DUT (
 	aclk,

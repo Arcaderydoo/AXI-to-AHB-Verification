@@ -95,8 +95,8 @@ class AXI_monitor extends uvm_monitor;
 				`uvm_info(get_type_name(), "R Channel method ended", UVM_LOW)
 				r_sem.put(1);
 			end
-		//join_any
-		join
+		join_any
+		//join
 	endtask
 
 	task aw_channel();

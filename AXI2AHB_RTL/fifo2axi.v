@@ -63,6 +63,25 @@ module fifo2axi(
 		end
 		else 
 			begin
+				if (bvalid && bready) bvalid <= 1'b0;
+        if (rvalid && rready) rvalid <= 1'b0;
+        if (read_en) begin
+            if (is_write) begin
+                bid    <= axi_id_resp[7:0];
+                bresp  <= axi_resp;
+                bvalid <= axi_id_resp[8];   // one B response per burst, on last beat
+            end
+            else begin
+                rid    <= axi_id_resp[7:0];
+                rdata  <= axi_rdata;
+                rresp  <= axi_resp;
+                rlast  <= axi_id_resp[8];
+                rvalid <= 1'b1;
+            end
+				end
+			end
+
+ /*
 				if(id_resp_r_en == 1'b1)
 					begin
 						if(axi_id_resp[9] == 1'b1)
@@ -142,7 +161,7 @@ module fifo2axi(
 						rlast <= 1'b0;
 						rvalid <= 1'b0;
 					end
-			end
+	*/
 
 endmodule
 

@@ -10,11 +10,11 @@ class AHB_rst_seqs extends uvm_sequence #(AHB_rst_xtn);
 		req = AHB_rst_xtn::type_id::create("req");
 
 		start_item(req);
-		assert(req.randomize() with {hresetn == 1'b0; hready == 1'b1;})
+		assert(req.randomize() with {hresetn == 1'b0;})
 		finish_item(req);
 			
 		start_item(req);
-		assert(req.randomize() with {hresetn == 1'b1; hready == 1'b0;})
+		assert(req.randomize() with {hresetn == 1'b1;})
 		finish_item(req);
 
 	endtask

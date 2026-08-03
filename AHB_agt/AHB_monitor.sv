@@ -43,7 +43,7 @@ class AHB_monitor extends uvm_monitor;
 				`uvm_info(get_type_name(), "inside hwrite monitor, before wait", UVM_LOW)
 				wait(ahb_intf.ahb_mon_cb.hready)
 				`uvm_info(get_type_name(), "inside hwrite monitor, after wait", UVM_LOW)
-				@(ahb_intf.ahb_mon_cb);
+				//@(ahb_intf.ahb_mon_cb);
 				xtn.hwdata = ahb_intf.ahb_mon_cb.hwdata;
 				//@(ahb_intf.ahb_mon_cb);
 				AHB_mon_port.write(xtn);
@@ -52,7 +52,7 @@ class AHB_monitor extends uvm_monitor;
 			begin
 				@(ahb_intf.ahb_mon_cb);
 				wait(ahb_intf.ahb_mon_cb.hready)
-				@(ahb_intf.ahb_mon_cb);
+				//@(ahb_intf.ahb_mon_cb);
 				xtn.hrdata = ahb_intf.ahb_mon_cb.hrdata;
 				//@(ahb_intf.ahb_mon_cb);
 				AHB_mon_port.write(xtn);

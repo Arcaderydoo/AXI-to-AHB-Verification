@@ -9,14 +9,14 @@ INC = +incdir+../AXI_agt/ +incdir+../AXI_rst_agt/ +incdir+../AHB_agt/ +incdir+..
 RTL = ../AXI2AHB_RTL/*.v
 INTF = ../AXI2AHB_RTL/*.sv
 
-TESTNAME = AHB_normal_test
+TESTNAME = AXI_write_fixed_test
 # VCS Commands
 
 cmp_VCS:
 	vcs -l out.log -timescale=1ns/1ns -sverilog -ntb_opts uvm -debug_access+all $(INC) $(PKG) $(INTF) $(TOP) $(RTL)
 
 sim_VCS: cmp_VCS
-	./simv -a out.log +UVM_TESTNAME=$(TESTNAME) +fsdbfile+axiahb.fsdb +ntb_random_seed_automatic -cm_dir ./cov_data
+	./simv -a out.log +UVM_TESTNAME=$(TESTNAME) +ntb_random_seed_automatic -cm_dir ./cov_data
 	urg -dir cov_data.vdb -format both -report covReport
 
 run_test_1: cmp_VCS

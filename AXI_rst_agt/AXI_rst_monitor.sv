@@ -28,14 +28,15 @@ class AXI_rst_monitor extends uvm_monitor;
 	task collect_data();	
 		xtn = AXI_rst_xtn::type_id::create("xtn");
 		
+		wait (!vif1.axi_rst_mon_cb.aresetn)
 		@(vif1.axi_rst_mon_cb)
-		@(vif1.axi_rst_mon_cb)
-		xtn.aresetn = vif1.aresetn;
-		xtn.rvalid = vif2.rvalid;
-		xtn.bvalid = vif2.bvalid;
+		//@(vif1.axi_rst_mon_cb)
+		xtn.aresetn = vif1.axi_rst_mon_cb.aresetn;
+		xtn.rvalid = vif2.axi_mon_cb.rvalid;
+		xtn.bvalid = vif2.axi_mon_cb.bvalid;
 	
-		//`uvm_info(get_type_name(), "Data in AXI RST MONITOR", UVM_LOW)
-		//xtn.print();
+		`uvm_info(get_type_name(), "Data in AXI RST MONITOR", UVM_LOW)
+		xtn.print();
 		AXI_rst_mon_port.write(xtn);
 	endtask
 	

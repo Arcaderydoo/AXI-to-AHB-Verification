@@ -27,14 +27,15 @@ class AHB_rst_monitor extends uvm_monitor;
 	endtask
 
 	task collect_data();	
+		wait (! ahb_rst_intf.ahb_rst_mon_cb.hresetn);
 		@(ahb_rst_intf.ahb_rst_mon_cb)
-		@(ahb_rst_intf.ahb_rst_mon_cb)
-		xtn.hresetn = ahb_rst_intf.hresetn;
-		xtn.hready = ahb_intf.hready;
-		xtn.htrans = ahb_intf.htrans;
+		//@(ahb_rst_intf.ahb_rst_mon_cb)
+		xtn.hresetn = ahb_rst_intf.ahb_rst_mon_cb.hresetn;
+		xtn.hready = ahb_intf.ahb_mon_cb.hready;
+		xtn.htrans = ahb_intf.ahb_mon_cb.htrans;
 
-		//`uvm_info(get_type_name(), "Data in AHB RST MONITOR", UVM_LOW)
-		//xtn.print();
+		`uvm_info(get_type_name(), "Data in AHB RST MONITOR", UVM_LOW)
+		xtn.print();
 		AHB_rst_mon_port.write(xtn);
 		
 	endtask

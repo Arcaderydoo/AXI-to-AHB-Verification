@@ -178,7 +178,7 @@ class scoreboard extends uvm_scoreboard;
 		AXI_xtn axi_xtn;
 
 		//`uvm_info(get_type_name(), "waiting for htrans to be 2'b10", UVM_LOW)
-		//wait(ahb_xtn.hready == 1);
+		wait(ahb_xtn.hready == 1);
 		//`uvm_info(get_type_name(), "htrans is 2'b10", UVM_LOW)
 
 		if (ahb_xtn.hwrite == 1'b1)
