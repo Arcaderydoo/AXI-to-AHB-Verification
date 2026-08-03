@@ -40,6 +40,51 @@ class AXI_driver extends uvm_driver #(AXI_xtn);
 		end
 	endtask
 
+/*	
+	task send_to_dut (AXI_xtn xtn);
+    aw_ch.push_back(xtn); w_ch.push_back(xtn); b_ch.push_back(xtn);
+    ar_ch.push_back(xtn); r_ch.push_back(xtn);
+		fork
+    	begin // AW
+      	aw_sem.get(1);
+				`uvm_info(get_type_name(), "aw_channel method started", UVM_LOW)
+        if (xtn.awvalid) 
+					aw_channel(aw_ch.pop_front());
+        else             
+					void'(aw_ch.pop_front());
+        aw_w_sem.put(1); aw_sem.put(1);
+			end
+      begin // W
+      	w_sem.get(1); 
+				aw_w_sem.get(1);
+        if (xtn.awvalid) 
+					w_channel(w_ch.pop_front());
+        else
+					void'(w_ch.pop_front());
+        w_b_sem.put(1); w_sem.put(1);
+     	end
+        begin // B
+            b_sem.get(1); w_b_sem.get(1);
+            if (xtn.awvalid) b_channel(b_ch.pop_front());
+            else             void'(b_ch.pop_front());
+            b_sem.put(1);
+        end
+        begin // AR
+            ar_sem.get(1);
+            if (xtn.arvalid) ar_channel(ar_ch.pop_front());
+            else             void'(ar_ch.pop_front());
+            ar_r_sem.put(1); ar_sem.put(1);
+        end
+        begin // R
+            r_sem.get(1); ar_r_sem.get(1);
+            if (xtn.arvalid) r_channel(r_ch.pop_front());
+            else             void'(r_ch.pop_front());
+            r_sem.put(1);
+        end
+    join_any                       // ← was join_any
+	endtask
+*/
+
 	task send_to_dut (AXI_xtn xtn);
 		// Store req in queues to not override in outstanding requests
 		aw_ch.push_back(xtn);
@@ -95,6 +140,7 @@ class AXI_driver extends uvm_driver #(AXI_xtn);
 		join_any	
 		//join
 	endtask
+
 
 	task aw_channel (AXI_xtn xtn);
 		@(axi_intf.axi_drv_cb);

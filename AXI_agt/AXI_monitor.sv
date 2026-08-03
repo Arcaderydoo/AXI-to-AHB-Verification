@@ -41,12 +41,31 @@ class AXI_monitor extends uvm_monitor;
 			`uvm_fatal(get_type_name(), "cannot get axi_if in AXI_monitor")
 	endfunction
 
+task run_phase (uvm_phase phase);
+    fork
+        forever aw_channel();
+        forever begin
+            AXI_xtn t = write_ch.pop_front();
+            if (t != null) w_channel(t); else @(axi_intf.axi_mon_cb);
+        end
+        forever begin
+            AXI_xtn t = write_ch.pop_front();
+            if (t != null) b_channel(t); else @(axi_intf.axi_mon_cb);
+        end
+        forever ar_channel();
+        forever begin
+            AXI_xtn t = read_ch.pop_front();
+            if (t != null) r_channel(t); else @(axi_intf.axi_mon_cb);
+        end
+    join_none
+endtask
+/*
 	task run_phase (uvm_phase phase);
 		forever begin
 			collect_data();
 		end
 	endtask
-	
+*/
 	task collect_data();
 		fork
 			begin
