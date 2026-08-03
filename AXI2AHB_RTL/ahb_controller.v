@@ -494,5 +494,10 @@ module ahb_controller(
 					end
 				end
 			endcase
+
+			int pop_count, xfer_count;
+			always @(posedge hclk) if (state_r_en && !state_fifo_empty) pop_count <= pop_count + 1;
+			always @(posedge hclk) if (htrans == 2'b10 && hready) xfer_count <= xfer_count + 1;
+			
 endmodule
 			

@@ -107,7 +107,7 @@ class AXI_write_fixed_test extends test;
 			seqh.start(envh.AXI_agth[0].seqrh);
 			ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
 		join
-		#100;
+		#300;
 		phase.drop_objection(this);
 	endtask
 

@@ -103,18 +103,18 @@ class AXI_monitor extends uvm_monitor;
 		aw_xtn = AXI_xtn::type_id::create("aw_xtn");
 		//aw_xtn = xtn;		
 
-		wait(axi_intf.awvalid && axi_intf.awready)
+		wait(axi_intf.axi_mon_cb.awvalid && axi_intf.axi_mon_cb.awready)
 		
-		aw_xtn.awid = axi_intf.awid;
-		aw_xtn.awvalid = axi_intf.awvalid;
-		aw_xtn.awready = axi_intf.awready;
-		aw_xtn.awlen = axi_intf.awlen;
-		aw_xtn.awsize = axi_intf.awsize;
-		aw_xtn.awburst = axi_intf.awburst;
-		aw_xtn.awaddr = axi_intf.awaddr;
+		aw_xtn.awid = axi_intf.axi_mon_cb.awid;
+		aw_xtn.awvalid = axi_intf.axi_mon_cb.awvalid;
+		aw_xtn.awready = axi_intf.axi_mon_cb.awready;
+		aw_xtn.awlen = axi_intf.axi_mon_cb.awlen;
+		aw_xtn.awsize = axi_intf.axi_mon_cb.awsize;
+		aw_xtn.awburst = axi_intf.axi_mon_cb.awburst;
+		aw_xtn.awaddr = axi_intf.axi_mon_cb.awaddr;
 		
 		write_ch.push_back(aw_xtn);
-		AXI_mon_port.write(aw_xtn);
+		//AXI_mon_port.write(aw_xtn);
 		
 		`uvm_info(get_type_name(), "AW Channel - WRITE DATA in AXI MONITOR", UVM_LOW)
 		aw_xtn.print();
@@ -131,32 +131,34 @@ class AXI_monitor extends uvm_monitor;
 
 		foreach (w_xtn.wdata[i])
 			begin
-				wait (axi_intf.wvalid && axi_intf.wready)
+				@(axi_intf.axi_mon_cb);
+				wait (axi_intf.axi_mon_cb.wvalid && axi_intf.axi_mon_cb.wready)
 
-				w_xtn.wid = axi_intf.wid;
-				w_xtn.wdata[i] = axi_intf.wdata;
-				w_xtn.wstrb[i] = axi_intf.wstrb;
-				w_xtn.wlast = axi_intf.wlast;
-				w_xtn.wvalid = axi_intf.wvalid;
-				w_xtn.wready = axi_intf.wready;
+				w_xtn.wid = axi_intf.axi_mon_cb.wid;
+				w_xtn.wdata[i] = axi_intf.axi_mon_cb.wdata;
+				w_xtn.wstrb[i] = axi_intf.axi_mon_cb.wstrb;
+				w_xtn.wlast = axi_intf.axi_mon_cb.wlast;
+				w_xtn.wvalid = axi_intf.axi_mon_cb.wvalid;
+				w_xtn.wready = axi_intf.axi_mon_cb.wready;
 				
 				write_data_xtn = AXI_xtn::type_id::create("write_data_xtn");
-				write_data_xtn.temp_wdata[7:0] = axi_intf.wstrb[0] ? axi_intf.wdata[7:0] : 8'b0;
-				write_data_xtn.temp_wdata[15:8] = axi_intf.wstrb[1] ? axi_intf.wdata[15:8] : 8'b0;
-				write_data_xtn.temp_wdata[23:16] = axi_intf.wstrb[2] ? axi_intf.wdata[23:16] : 8'b0;
-				write_data_xtn.temp_wdata[31:24] = axi_intf.wstrb[3] ? axi_intf.wdata[31:24] : 8'b0;
-				write_data_xtn.temp_wdata[39:32] = axi_intf.wstrb[4] ? axi_intf.wdata[39:32] : 8'b0;
-				write_data_xtn.temp_wdata[47:40] = axi_intf.wstrb[5] ? axi_intf.wdata[47:40] : 8'b0;
-				write_data_xtn.temp_wdata[55:48] = axi_intf.wstrb[6] ? axi_intf.wdata[55:48] : 8'b0;
-				write_data_xtn.temp_wdata[63:56] = axi_intf.wstrb[7] ? axi_intf.wdata[63:56] : 8'b0;
+				write_data_xtn.temp_wdata[7:0] = axi_intf.axi_mon_cb.wstrb[0] ? axi_intf.axi_mon_cb.wdata[7:0] : 8'b0;
+				write_data_xtn.temp_wdata[15:8] = axi_intf.axi_mon_cb.wstrb[1] ? axi_intf.axi_mon_cb.wdata[15:8] : 8'b0;
+				write_data_xtn.temp_wdata[23:16] = axi_intf.axi_mon_cb.wstrb[2] ? axi_intf.axi_mon_cb.wdata[23:16] : 8'b0;
+				write_data_xtn.temp_wdata[31:24] = axi_intf.axi_mon_cb.wstrb[3] ? axi_intf.axi_mon_cb.wdata[31:24] : 8'b0;
+				write_data_xtn.temp_wdata[39:32] = axi_intf.axi_mon_cb.wstrb[4] ? axi_intf.axi_mon_cb.wdata[39:32] : 8'b0;
+				write_data_xtn.temp_wdata[47:40] = axi_intf.axi_mon_cb.wstrb[5] ? axi_intf.axi_mon_cb.wdata[47:40] : 8'b0;
+				write_data_xtn.temp_wdata[55:48] = axi_intf.axi_mon_cb.wstrb[6] ? axi_intf.axi_mon_cb.wdata[55:48] : 8'b0;
+				write_data_xtn.temp_wdata[63:56] = axi_intf.axi_mon_cb.wstrb[7] ? axi_intf.axi_mon_cb.wdata[63:56] : 8'b0;
 
-				@(axi_intf.axi_mon_cb);
 				
+				//@(axi_intf.axi_mon_cb);
 				AXI_wdata_mon_port.write(write_data_xtn);
+				@(axi_intf.axi_mon_cb);
 			end
 
 		write_ch.push_back(w_xtn);
-		AXI_mon_port.write(w_xtn);
+		//AXI_mon_port.write(w_xtn);
 
 		`uvm_info(get_type_name(), "W Channel - WRITE DATA in AXI MONITOR", UVM_LOW)
 		w_xtn.print();
@@ -167,12 +169,12 @@ class AXI_monitor extends uvm_monitor;
 		b_xtn = AXI_xtn::type_id::create("b_xtn");
 		b_xtn = xtn;
 		
-		wait (axi_intf.bvalid && axi_intf.bready)
+		wait (axi_intf.axi_mon_cb.bvalid && axi_intf.axi_mon_cb.bready)
 		
-		b_xtn.bvalid = axi_intf.bvalid;
-		b_xtn.bready = axi_intf.bready;
-		b_xtn.bid = axi_intf.bid;
-		b_xtn.bresp = axi_intf.bresp;
+		b_xtn.bvalid = axi_intf.axi_mon_cb.bvalid;
+		b_xtn.bready = axi_intf.axi_mon_cb.bready;
+		b_xtn.bid = axi_intf.axi_mon_cb.bid;
+		b_xtn.bresp = axi_intf.axi_mon_cb.bresp;
 
 		@(axi_intf.axi_mon_cb);
 
@@ -185,19 +187,19 @@ class AXI_monitor extends uvm_monitor;
 	task ar_channel();
 		ar_xtn = AXI_xtn::type_id::create("ar_xtn");
 
-		wait (axi_intf.arvalid && axi_intf.arready)
+		wait (axi_intf.axi_mon_cb.arvalid && axi_intf.axi_mon_cb.arready)
 		
-		ar_xtn.arid = axi_intf.arid;
-		ar_xtn.araddr = axi_intf.araddr;
-		ar_xtn.arlen = axi_intf.arlen;
-		ar_xtn.arsize = axi_intf.arsize;
-		ar_xtn.arburst = axi_intf.arburst;
-		ar_xtn.arvalid = axi_intf.arvalid;
-		ar_xtn.arready = axi_intf.arready;
+		ar_xtn.arid = axi_intf.axi_mon_cb.arid;
+		ar_xtn.araddr = axi_intf.axi_mon_cb.araddr;
+		ar_xtn.arlen = axi_intf.axi_mon_cb.arlen;
+		ar_xtn.arsize = axi_intf.axi_mon_cb.arsize;
+		ar_xtn.arburst = axi_intf.axi_mon_cb.arburst;
+		ar_xtn.arvalid = axi_intf.axi_mon_cb.arvalid;
+		ar_xtn.arready = axi_intf.axi_mon_cb.arready;
 
 		@(axi_intf.axi_mon_cb);
 		read_ch.push_back(ar_xtn);
-		AXI_mon_port.write(ar_xtn);
+		//AXI_mon_port.write(ar_xtn);
 		`uvm_info(get_type_name(), "AR CHANNEL - READ DATA in AXI MONITOR", UVM_LOW)
 		ar_xtn.print();
 
@@ -211,16 +213,16 @@ class AXI_monitor extends uvm_monitor;
 		
 		foreach(r_xtn.rdata[i])
 			begin
-				wait (axi_intf.rvalid && axi_intf.rready)
-				r_xtn.rid = axi_intf.rid;
-				r_xtn.rdata[i] = axi_intf.rdata;
-				r_xtn.rresp[i] = axi_intf.rresp;
-				r_xtn.rlast = axi_intf.rlast;
-				r_xtn.rready = axi_intf.rready;
-				r_xtn.rvalid = axi_intf.rvalid;
+				wait (axi_intf.axi_mon_cb.rvalid && axi_intf.axi_mon_cb.rready)
+				r_xtn.rid = axi_intf.axi_mon_cb.rid;
+				r_xtn.rdata[i] = axi_intf.axi_mon_cb.rdata;
+				r_xtn.rresp[i] = axi_intf.axi_mon_cb.rresp;
+				r_xtn.rlast = axi_intf.axi_mon_cb.rlast;
+				r_xtn.rready = axi_intf.axi_mon_cb.rready;
+				r_xtn.rvalid = axi_intf.axi_mon_cb.rvalid;
 
 				read_data_xtn = AXI_xtn::type_id::create("read_data_xtn");
-				read_data_xtn.temp_rdata = axi_intf.rdata;
+				read_data_xtn.temp_rdata = axi_intf.axi_mon_cb.rdata;
 
 				@(axi_intf.axi_mon_cb);
 				AXI_rdata_mon_port.write(read_data_xtn);

@@ -17,7 +17,7 @@
    logic 	[3:0] 	hmaster;
    //AHB DRIVER clocking block:
    clocking ahb_drv_cb@(posedge clock);
-     default input #1 output #1;
+     //default input #1 output #0;
      input	haddr;
      input 	htrans;
      input      hwrite;

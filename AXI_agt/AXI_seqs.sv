@@ -28,18 +28,18 @@ class AXI_write_fixed_seqs extends AXI_base_seqs;
 		super.body();	
 
 		start_item(req);
-		assert(req.randomize with {awvalid == 1'b1; wvalid == 1'b1; arvalid == 1'b0; awsize == 3'd0; awburst == 2'b00; awlen == len; awaddr == 32'haa;  bready == 1'b1; rready == 1'b1;});
+		assert(req.randomize with {awvalid == 1'b1; wvalid == 1'b1; arvalid == 1'b0; awsize == 3'd0; awburst == 2'b00; awlen == len; awaddr == 32'haa;  bready == 1'b1; rready == 1'b0;});
 		finish_item(req);
 
 	endtask
 
 endclass
 
-class AXI_inc_seqs extends AXI_base_seqs;
+class AXI_write_inc_seqs extends AXI_base_seqs;
 
-	`uvm_object_utils(AXI_inc_seqs)
+	`uvm_object_utils(AXI_write_inc_seqs)
 
-	function new (string name = "AXI_inc_seqs");
+	function new (string name = "AXI_write_inc_seqs");
 		super.new(name);
 	endfunction
 
@@ -47,7 +47,7 @@ class AXI_inc_seqs extends AXI_base_seqs;
 		super.body();	
 		start_item(req);
 		assert(req.randomize with {awvalid == 1'b1; awburst == 2'b01; awlen == len; awsize == 3'd3;
-		wvalid == 1'b1; arvalid == 1'b1; bready == 1'b1; rready == 1'b1;});
+		wvalid == 1'b1; arvalid == 1'b0; bready == 1'b1; rready == 1'b0;});
 		finish_item(req);
 	endtask
 

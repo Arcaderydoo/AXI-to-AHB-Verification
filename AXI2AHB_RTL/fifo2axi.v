@@ -62,6 +62,7 @@ module fifo2axi(
 			rvalid <= 1'b0;
 		end
 		else 
+			/*
 			begin
 				if (bvalid && bready) bvalid <= 1'b0;
         if (rvalid && rready) rvalid <= 1'b0;
@@ -80,8 +81,8 @@ module fifo2axi(
             end
 				end
 			end
-
- /*
+			*/
+		 	begin
 				if(id_resp_r_en == 1'b1)
 					begin
 						if(axi_id_resp[9] == 1'b1)
@@ -95,7 +96,7 @@ module fifo2axi(
 							begin	
 								bid <= 8'b0;
 								rid <= axi_id_resp[7:0];
-								bvalid <= 1'b0;
+								bvalid <= 1'b1;
 								rvalid <= 1'b1;
 							end
 					end
@@ -161,7 +162,7 @@ module fifo2axi(
 						rlast <= 1'b0;
 						rvalid <= 1'b0;
 					end
-	*/
+				end
 
 endmodule
 

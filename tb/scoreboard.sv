@@ -135,7 +135,10 @@ class scoreboard extends uvm_scoreboard;
 				`uvm_info(get_type_name(), "got ahb data", UVM_LOW)
 				ahb_cov = new ahb_xtn;
 				ahb_cg.sample();
-				compare_data(ahb_xtn);
+				fork
+					compare_write_data(ahb_xtn);
+					compare_read_data(ahb_xtn);
+				join_any
 			end
 			// Get write data in AXI
 			forever begin
@@ -174,11 +177,10 @@ class scoreboard extends uvm_scoreboard;
 			end
 	endtask
 
-	task compare_data (AHB_xtn ahb_xtn);
+	task compare_write_data (AHB_xtn ahb_xtn);
 		AXI_xtn axi_xtn;
 
 		//`uvm_info(get_type_name(), "waiting for htrans to be 2'b10", UVM_LOW)
-		wait(ahb_xtn.hready == 1);
 		//`uvm_info(get_type_name(), "htrans is 2'b10", UVM_LOW)
 
 		if (ahb_xtn.hwrite == 1'b1)
@@ -195,7 +197,12 @@ class scoreboard extends uvm_scoreboard;
 						`uvm_info(get_type_name(), $sformatf("DATA MISMATCH :(, axi_wdata = %0h, ahb_wdata = %0h", axi_xtn.temp_wdata, ahb_xtn.hwdata), UVM_LOW)
 					end
 			end
-		else if (ahb_xtn.hwrite == 1'b0)
+	endtask
+
+	task compare_read_data (AHB_xtn ahb_xtn);
+		AXI_xtn axi_xtn;
+
+		if (ahb_xtn.hwrite == 1'b0)
 			begin
 				`uvm_info(get_type_name(), "waiting for rdata queue", UVM_LOW)
 				wait(read_data.size() != 0)
