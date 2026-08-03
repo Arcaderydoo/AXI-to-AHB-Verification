@@ -94,7 +94,7 @@ class AXI_write_fixed_test extends test;
 
 	function void build_phase (uvm_phase phase);
 		super.build_phase(phase);
-		len = 3;
+		len = 15;
 		uvm_config_db #(int)::set(this, "*", "len", len);
 	endfunction
 
@@ -126,7 +126,7 @@ class AXI_write_increment_test extends test;
 
 	function void build_phase (uvm_phase phase);
 		super.build_phase(phase);
-		len = 7;
+		len = 5;
 		uvm_config_db #(int)::set(this, "*", "len", len);
 	endfunction
 
@@ -204,6 +204,38 @@ class AHB_normal_test extends test;
 			ahb_normal_seqh.start(envh.AHB_agth[0].seqrh);
 		join
 		#1000;
+		phase.drop_objection(this);
+	endtask
+
+endclass
+
+class AXI_read_fixed_test extends test;
+
+	`uvm_component_utils(AXI_read_fixed_test)
+
+	AXI_read_fixed_seqs axi_seqh;
+	AHB_normal_seqs ahb_seqh;
+
+	function new (string name = "AXI_read_fixed_test", uvm_component parent);
+		super.new(name, parent);
+	endfunction
+
+	function void build_phase (uvm_phase phase);
+		super.build_phase(phase);
+		len = 5;
+		uvm_config_db #(int)::set(this, "*", "len", len);
+	endfunction
+
+	task run_phase (uvm_phase phase);
+		super.run_phase(phase);
+		axi_seqh = AXI_read_fixed_seqs::type_id::create("axi_seqh");
+		ahb_seqh = AHB_normal_seqs::type_id::create("ahb_seqh");
+		phase.raise_objection(this);
+		fork
+			axi_seqh.start(envh.AXI_agth[0].seqrh);
+			ahb_seqh.start(envh.AHB_agth[0].seqrh);
+		join
+		#300;
 		phase.drop_objection(this);
 	endtask
 

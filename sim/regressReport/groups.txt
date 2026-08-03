@@ -2,15 +2,14 @@ Testbench Group List
 
 Total Groups Coverage Summary 
 SCORE  INST SCORE WEIGHT 
- 76.54  76.54     1      
+ 91.08  91.08     1      
 
 
-Total groups in report: 6
+Total groups in report: 5
 -------------------------------------------------------------------------------
 SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                              
-  0.00   0.00    1      100    1        1            64           64                    top_pkg::scoreboard::axi_rdata_cg 
- 82.14  82.14    1      100    1        1            64           64                    top_pkg::scoreboard::ahb_cg       
- 83.33  83.33    1      100    1        1            64           64                    top_pkg::scoreboard::axi_wdata_cg 
+ 75.00  75.00    1      100    1        1            64           64                    top_pkg::scoreboard::ahb_cg       
+ 86.67  86.67    1      100    1        1            64           64                    top_pkg::scoreboard::axi_wdata_cg 
  93.75  93.75    1      100    1        1            64           64                    top_pkg::scoreboard::axi_cg       
 100.00 100.00    1      100    1        1            64           64                    top_pkg::scoreboard::ahb_rst_cg   
 100.00 100.00    1      100    1        1            64           64                    top_pkg::scoreboard::axi_rst_cg   

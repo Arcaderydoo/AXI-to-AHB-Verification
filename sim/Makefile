@@ -9,7 +9,7 @@ INC = +incdir+../AXI_agt/ +incdir+../AXI_rst_agt/ +incdir+../AHB_agt/ +incdir+..
 RTL = ../AXI2AHB_RTL/*.v
 INTF = ../AXI2AHB_RTL/*.sv
 
-TESTNAME = AXI_write_wrapped_test
+TESTNAME = AXI_read_fixed_test
 # VCS Commands
 
 cmp_VCS:
@@ -20,15 +20,15 @@ sim_VCS: cmp_VCS
 	urg -dir cov_data.vdb -format both -report covReport
 
 run_test_1: cmp_VCS
-	./simv -a out.log +UVM_TESTNAME=AXI_fixed_test +fsdbfile+axiahb.fsdb +ntb_random_seed_automatic -cm_dir ./axifixed_data
+	./simv -a out.log +UVM_TESTNAME=AXI_write_fixed_test +ntb_random_seed_automatic -cm_dir ./axifixed_data
 	urg -dir axifixed_data.vdb -format both -report axifixedReport
 
 run_test_2: cmp_VCS
-	./simv -a out.log +UVM_TESTNAME=AXI_increment_test +fsdbfile+axiahb.fsdb +ntb_random_seed_automatic -cm_dir ./axiincrement_data
+	./simv -a out.log +UVM_TESTNAME=AXI_write_increment_test +fsdbfile+axiahb.fsdb +ntb_random_seed_automatic -cm_dir ./axiincrement_data
 	urg -dir axiincrement_data.vdb -format both -report axiincrementReport
 
 run_test_3: cmp_VCS
-	./simv -a out.log +UVM_TESTNAME=AXI_wrapped_test +fsdbfile+axiahb.fsdb +ntb_random_seed_automatic -cm_dir ./axiwrapped_data
+	./simv -a out.log +UVM_TESTNAME=AXI_write_wrapped_test +fsdbfile+axiahb.fsdb +ntb_random_seed_automatic -cm_dir ./axiwrapped_data
 	urg -dir axiwrapped_data.vdb -format both -report axifixedReport
 
 run_test_4: cmp_VCS
@@ -36,7 +36,7 @@ run_test_4: cmp_VCS
 	urg -dir ahbnormal_data.vdb -format both -report ahbnormalReport
 
 report:
-	urg -dir axifixed_data.vdb axiincrement_data.vdb axiwrapped_data.vdb ahbnormal_data.vdb -format both -report regressReport
+	urg -dir cov_data.vdb axifixed_data.vdb axiincrement_data.vdb axiwrapped_data.vdb ahbnormal_data.vdb -format both -report regressReport
 
 run_VCS: cmp_VCS sim_VCS
 

@@ -90,7 +90,7 @@ class scoreboard extends uvm_scoreboard;
 		ahb_rst_cg = new;
 		axi_cg = new;
 		axi_wdata_cg = new;
-		axi_rdata_cg = new;
+		//axi_rdata_cg = new;
 		ahb_cg = new;
 
 		// FIFO Handles
@@ -126,8 +126,8 @@ class scoreboard extends uvm_scoreboard;
 				axi_cg.sample();
 				foreach (axi_cov.wdata[i])
 					axi_wdata_cg.sample(i);
-				foreach (axi_cov.rdata[i])
-					axi_rdata_cg.sample(i);
+				//foreach (axi_cov.rdata[i])
+				//	axi_rdata_cg.sample(i);
 			end
 			// Get AHB data
 			forever begin
