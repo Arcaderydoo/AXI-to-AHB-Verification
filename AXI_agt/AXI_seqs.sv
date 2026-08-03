@@ -54,19 +54,19 @@ class AXI_write_inc_seqs extends AXI_base_seqs;
 endclass
 
 
-class AXI_wrap_seqs extends AXI_base_seqs;
+class AXI_write_wrap_seqs extends AXI_base_seqs;
 
-	`uvm_object_utils(AXI_wrap_seqs)
+	`uvm_object_utils(AXI_write_wrap_seqs)
 
-	function new (string name = "AXI_wrap_seqs");
+	function new (string name = "AXI_write_wrap_seqs");
 		super.new(name);
 	endfunction
 
 	task body;
 		super.body();	
 		start_item(req);
-		assert(req.randomize with {awvalid == 1'b1; awaddr == 2000; awburst == 2'b10; awlen == len; awsize == 3'd0;
-		wvalid == 1'b1; arvalid == 1'b1; araddr == 2000; arlen == len; arsize == 3'd0; arburst == 2'b10;  bready == 1'b1; rready == 1'b1;});
+		assert(req.randomize with {awvalid == 1'b1; awaddr == 2000; awburst == 2'b10; awlen == len; awsize == 3'd3;
+		wvalid == 1'b1; arvalid == 1'b0; araddr == 2000; arlen == len; arsize == 3'd0; arburst == 2'b10;  bready == 1'b1; rready == 1'b0;});
 		finish_item(req);
 	endtask
 

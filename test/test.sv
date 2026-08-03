@@ -113,12 +113,12 @@ class AXI_write_fixed_test extends test;
 
 endclass
 
-class AXI_increment_test extends test;
+class AXI_write_increment_test extends test;
 
-	`uvm_component_utils(AXI_increment_test)
+	`uvm_component_utils(AXI_write_increment_test)
 
-	AXI_inc_seqs axi_inc_seqh;
-	AHB_free_run_seqs ahb_bg_seqh;
+	AXI_write_inc_seqs axi_inc_seqh;
+	AHB_normal_seqs ahb_bg_seqh;
 
 	function new (string name = "AXI_increment_test", uvm_component parent);
 		super.new(name, parent);
@@ -132,27 +132,27 @@ class AXI_increment_test extends test;
 
 	task run_phase (uvm_phase phase);
 		super.run_phase(phase);
-		axi_inc_seqh = AXI_inc_seqs::type_id::create("axi_inc_seqh");
-		ahb_bg_seqh = AHB_free_run_seqs::type_id::create("ahb_bg_seqh");
+		axi_inc_seqh = AXI_write_inc_seqs::type_id::create("axi_write_inc_seqh");
+		ahb_bg_seqh = AHB_normal_seqs::type_id::create("ahb_bg_seqh");
 		phase.raise_objection(this);
 		fork
 			ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
-		join_none
-		axi_inc_seqh.start(envh.AXI_agth[0].seqrh);
-		#1000;
+			axi_inc_seqh.start(envh.AXI_agth[0].seqrh);
+		join
+		#300;
 		phase.drop_objection(this);
 	endtask
 
 endclass
 
-class AXI_wrapped_test extends test;
+class AXI_write_wrapped_test extends test;
 
-	`uvm_component_utils(AXI_wrapped_test)
+	`uvm_component_utils(AXI_write_wrapped_test)
 
-	AXI_wrap_seqs axi_wrap_seqh;
-	AHB_free_run_seqs ahb_bg_seqh;
+	AXI_write_wrap_seqs axi_wrap_seqh;
+	AHB_normal_seqs ahb_bg_seqh;
 
-	function new (string name = "AXI_wrapped_test", uvm_component parent);
+	function new (string name = "AXI_write_wrapped_test", uvm_component parent);
 		super.new(name, parent);
 	endfunction
 
@@ -164,14 +164,14 @@ class AXI_wrapped_test extends test;
 
 	task run_phase (uvm_phase phase);
 		super.run_phase(phase);
-		axi_wrap_seqh = AXI_wrap_seqs::type_id::create("axi_wrap_seqh");
-		ahb_bg_seqh = AHB_free_run_seqs::type_id::create("ahb_bg_seqh");
+		axi_wrap_seqh = AXI_write_wrap_seqs::type_id::create("axi_wrap_seqh");
+		ahb_bg_seqh = AHB_normal_seqs::type_id::create("ahb_bg_seqh");
 		phase.raise_objection(this);
 		fork
 			ahb_bg_seqh.start(envh.AHB_agth[0].seqrh);
-		join_none
-		axi_wrap_seqh.start(envh.AXI_agth[0].seqrh);
-		#1000;
+			axi_wrap_seqh.start(envh.AXI_agth[0].seqrh);
+		join
+		#300;
 		phase.drop_objection(this);
 	endtask
 
@@ -181,7 +181,7 @@ class AHB_normal_test extends test;
 	
 	`uvm_component_utils(AHB_normal_test)
 
-	AXI_wrap_seqs axi_wrap_seqh;
+	AXI_write_wrap_seqs axi_wrap_seqh;
 	AHB_normal_seqs ahb_normal_seqh;
 
 	function new (string name = "AHB_normal_test", uvm_component parent);
@@ -196,7 +196,7 @@ class AHB_normal_test extends test;
 
 	task run_phase (uvm_phase phase);
 		super.run_phase(phase);
-		axi_wrap_seqh = AXI_wrap_seqs::type_id::create("axi_wrap_seqh");
+		axi_wrap_seqh = AXI_write_wrap_seqs::type_id::create("axi_wrap_seqh");
 		ahb_normal_seqh = AHB_normal_seqs::type_id::create("ahb_normal_seqh");
 		phase.raise_objection(this);
 		fork

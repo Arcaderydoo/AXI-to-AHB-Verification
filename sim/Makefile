@@ -9,7 +9,7 @@ INC = +incdir+../AXI_agt/ +incdir+../AXI_rst_agt/ +incdir+../AHB_agt/ +incdir+..
 RTL = ../AXI2AHB_RTL/*.v
 INTF = ../AXI2AHB_RTL/*.sv
 
-TESTNAME = AXI_write_fixed_test
+TESTNAME = AXI_write_wrapped_test
 # VCS Commands
 
 cmp_VCS:

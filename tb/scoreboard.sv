@@ -191,6 +191,7 @@ class scoreboard extends uvm_scoreboard;
 				if (axi_xtn.temp_wdata == ahb_xtn.hwdata)
 					begin
 						`uvm_info(get_type_name(), "DATA MATCH :)", UVM_LOW)
+						`uvm_info(get_type_name(), $sformatf("axi_wdata = %0h, ahb_wdata = %0h", axi_xtn.temp_wdata, ahb_xtn.hwdata), UVM_LOW)
 					end
 				else
 					begin
@@ -210,6 +211,7 @@ class scoreboard extends uvm_scoreboard;
 				if (axi_xtn.temp_rdata == ahb_xtn.hrdata)
 					begin
 						`uvm_info(get_type_name(), "DATA MATCH :)", UVM_LOW)
+						`uvm_info(get_type_name(), $sformatf("axi_wdata = %0h, ahb_wdata = %0h", axi_xtn.temp_wdata, ahb_xtn.hwdata), UVM_LOW)
 					end
 				else
 					begin

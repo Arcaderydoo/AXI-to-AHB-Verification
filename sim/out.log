@@ -8,7 +8,7 @@ Command: vcs -l out.log -timescale=1ns/1ns -sverilog -ntb_opts uvm -debug_access
 ../AXI2AHB_RTL/id_send_fifo.v ../AXI2AHB_RTL/rdata_fifo.v ../AXI2AHB_RTL/resp_fifo.v \
 ../AXI2AHB_RTL/size_fifo.v ../AXI2AHB_RTL/write_fifo.v
                          Chronologic VCS (TM)
-         Version X-2025.06_Full64 -- Mon Aug  3 18:26:15 2026
+         Version X-2025.06_Full64 -- Mon Aug  3 19:01:16 2026
 
                     Copyright (c) 1991 - 2025 Synopsys, Inc.
    This software and the associated documentation are proprietary to Synopsys,
@@ -26,15 +26,438 @@ Command: vcs -l out.log -timescale=1ns/1ns -sverilog -ntb_opts uvm -debug_access
             Inclusivity and Diversity" (Refer to article 000036315 at
                         https://solvnetplus.synopsys.com)
 
-The design hasn't changed and need not be recompiled. 
-If you really want to, delete file simv.daidir/.vcs.timestamp and
-run VCS again.
+Parsing design file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_version_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/snps_macros.svp'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_message_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_phase_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_object_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_printer_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_tlm_defines.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm_imps.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_tlm_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_sequence_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_callback_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_reg_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/macros/uvm_deprecated_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/directc/uvm_directc.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/directc/uvm_seed.vh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/directc/uvm_directc.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/dpi/uvm_dpi.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/dpi/uvm_hdl.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/dpi/uvm_dpi.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/dpi/uvm_svcmd_dpi.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/dpi/uvm_dpi.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/dpi/uvm_regex.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/dpi/uvm_dpi.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_version.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_object_globals.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_misc.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_object.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_pool.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_queue.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_factory.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_registry.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_spell_chkr.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_resource.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/deprecated/uvm_resource_converter.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_resource_specializations.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_resource_db.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_config_db.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_printer.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_comparer.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_packer.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_recorder.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_event_callback.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_event.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_barrier.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_callback.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_callback.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_report_catcher.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_report_server.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_report_handler.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_report_object.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_transaction.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_phase.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_domain.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_bottomup_phase.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_topdown_phase.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_task_phase.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_common_phases.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_runtime_phases.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_component.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_root.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_component.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_objection.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_heartbeat.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_globals.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_cmdline_processor.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_base.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm_ifs.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_sqr_ifs.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_port_base.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm_imps.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_imps.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_ports.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_exports.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_analysis_port.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm_fifo_base.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm_fifos.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm_req_rsp.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_sqr_connections.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm1/uvm_tlm.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_pair.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_policies.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_in_order_comparator.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_algorithmic_comparator.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_random_stimulus.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_subscriber.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_monitor.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_driver.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_push_driver.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_scoreboard.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_agent.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_env.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_test.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/comps/uvm_comps.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_sequence_item.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_sequencer_base.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_sequencer_analysis_fifo.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_sequencer_param_base.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_sequencer.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_push_sequencer.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_sequence_base.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_sequence.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_sequence_library.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_sequence_builtin.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/seq/uvm_seq.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2_defines.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2_time.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2_generic_payload.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2_ifs.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2_imps.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2_ports.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2_exports.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2_sockets_base.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2_sockets.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/tlm2/uvm_tlm2.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_item.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_adapter.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_predictor.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_sequence.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_cbs.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_backdoor.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_field.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_vreg_field.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_indirect.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_fifo.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_file.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_mem_mam.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_vreg.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_mem.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_map.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_block.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/sequences/uvm_reg_hw_reset_seq.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/sequences/uvm_reg_bit_bash_seq.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/sequences/uvm_mem_walk_seq.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/sequences/uvm_mem_access_seq.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/sequences/uvm_reg_access_seq.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/sequences/uvm_reg_mem_shared_access_seq.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/sequences/uvm_reg_mem_built_in_seq.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/snps_uvm_reg_bank.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/reg/uvm_reg_model.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/vcs/vcs_uvm_alt.sv'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_pkg.sv'.
+Parsing design file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/vcs/uvm_custom_install_vcs_recorder.sv'
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/vcs/msglog.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/vcs/uvm_custom_install_vcs_recorder.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/vcs/uvm_msglog_report_server.sv'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/vcs/uvm_custom_install_vcs_recorder.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/vcs/uvm_vcs_recorder.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/vcs/uvm_custom_install_vcs_recorder.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/vcs/uvm_vcs_record_interface.sv'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/vcs/uvm_custom_install_vcs_recorder.sv'.
+Parsing design file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv'
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_verdi_recorder.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_verdi_pli_base.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_verdi_recorder.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_verdi_reg_map_recording.sv'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_verdi_message_catcher.svh'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_verdi_pli_base.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_verdi_message_catcher.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/./dpi/uvm_verdi_dpi.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_verdi_reg_recording.sv'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/verdi_vX-2025.06/verdi/X-2025.06/share/PLI/VCS/include/verdi_trans_recorder_dpi.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_verdi_pli.svh'.
+Back to file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv'.
+Parsing design file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/verdi/uvm_custom_install_verdi_recorder.sv'
+Parsing design file '../tb/top_pkg.sv'
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../tb/env_config.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_agt/AXI_xtn.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_agt/AXI_seqs.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_agt/AXI_sequencer.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_agt/AXI_driver.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_agt/AXI_monitor.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_agt/AXI_agent_config.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_agt/AXI_agent.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_rst_agt/AXI_rst_xtn.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_rst_agt/AXI_rst_seqs.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_rst_agt/AXI_rst_sequencer.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_rst_agt/AXI_rst_driver.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_rst_agt/AXI_rst_monitor.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_rst_agt/AXI_rst_agent_config.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AXI_rst_agt/AXI_rst_agent.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_agt/AHB_xtn.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_agt/AHB_seqs.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_agt/AHB_sequencer.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_agt/AHB_driver.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_agt/AHB_monitor.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_agt/AHB_agent_config.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_agt/AHB_agent.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_rst_agt/AHB_rst_xtn.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_rst_agt/AHB_rst_seqs.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_rst_agt/AHB_rst_sequencer.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_rst_agt/AHB_rst_driver.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_rst_agt/AHB_rst_monitor.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_rst_agt/AHB_rst_agent_config.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../AHB_rst_agt/AHB_rst_agent.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../tb/scoreboard.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../tb/env.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing included file '../test/test.sv'.
+Back to file '../tb/top_pkg.sv'.
+Parsing design file '../AXI2AHB_RTL/ahb_interface.sv'
+Parsing design file '../AXI2AHB_RTL/ahb_rst_interface.sv'
+Parsing design file '../AXI2AHB_RTL/axi_interface.sv'
+Parsing design file '../AXI2AHB_RTL/axi_rst_interface.sv'
+Parsing design file '../tb/top.sv'
+Parsing included file '/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/uvm_macros.svh'.
+Back to file '../tb/top.sv'.
+Parsing design file '../AXI2AHB_RTL/addr_fifo.v'
+Parsing design file '../AXI2AHB_RTL/ahb_controller.v'
+Parsing design file '../AXI2AHB_RTL/axi2ahb_bridge_top.v'
+Parsing design file '../AXI2AHB_RTL/axi2fifo.v'
+Parsing design file '../AXI2AHB_RTL/axi_controller.v'
+Parsing design file '../AXI2AHB_RTL/data_fifo.v'
+Parsing design file '../AXI2AHB_RTL/fifo2axi.v'
+Parsing design file '../AXI2AHB_RTL/fifo_wrapper.v'
+Parsing design file '../AXI2AHB_RTL/id_resp_fifo.v'
+Parsing design file '../AXI2AHB_RTL/id_send_fifo.v'
+Parsing design file '../AXI2AHB_RTL/rdata_fifo.v'
+Parsing design file '../AXI2AHB_RTL/resp_fifo.v'
+Parsing design file '../AXI2AHB_RTL/size_fifo.v'
+Parsing design file '../AXI2AHB_RTL/write_fifo.v'
+Top Level Modules:
+       uvm_custom_install_recording
+       uvm_custom_install_verdi_recording
+       top
+TimeScale is 1 ns / 1 ns
+Starting vcs inline pass...
+14 modules and 0 UDP read.
+recompiling package vcs_paramclassrepository
+recompiling package uvm_pkg
+recompiling module uvm_custom_install_recording
+recompiling module uvm_custom_install_verdi_recording
+recompiling package top_pkg
+recompiling module top
+6 of 14 modules done
+	However, due to incremental compilation, only 6 modules need to be compiled. 
+make[1]: Entering directory '/home2/B126/AKSSolomon/VLSI_RN_OFFLINE/AXI2AHB_Bridge/sim/csrc' \
 
-Command: /home2/B126/AKSSolomon/VLSI_RN_OFFLINE/AXI2AHB_Bridge/sim/./simv -a out.log +UVM_TESTNAME=AXI_write_fixed_test +ntb_random_seed_automatic -cm_dir ./cov_data
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/linux64/lib -L/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1 uvm_dpi.o uvm_verdi_dpi.o    _3793521_archive_1.so \
+_prev_archive_1.so _cuarc0.so  SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o \
+rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs \
+-lvcsnew -lsimprofile -luclinative /home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/linux64/lib/vcs_tls.o \
+-Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive      ./../simv.daidir/vc_hdrs.o \
+_vcs_pli_stub_.o   /home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/linux64/lib/vcs_save_restore_new.o \
+/home/cad/eda/SYNOPSYS/verdi_vX-2025.06/verdi/X-2025.06/share/PLI/VCS/LINUX64/pli.a \
+-ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory '/home2/B126/AKSSolomon/VLSI_RN_OFFLINE/AXI2AHB_Bridge/sim/csrc' \
+
+CPU time: 9.225 seconds to compile + .350 seconds to elab + .657 seconds to link
+Command: /home2/B126/AKSSolomon/VLSI_RN_OFFLINE/AXI2AHB_Bridge/sim/./simv -a out.log +UVM_TESTNAME=AXI_write_wrapped_test +ntb_random_seed_automatic -cm_dir ./cov_data
 Chronologic VCS simulator copyright 1991-2025
 Contains Synopsys proprietary information.
-Compiler version X-2025.06_Full64; Runtime version X-2025.06_Full64;  Aug  3 18:26 2026
-NOTE: automatic random seed used: 2970275468
+Compiler version X-2025.06_Full64; Runtime version X-2025.06_Full64;  Aug  3 19:01 2026
+NOTE: automatic random seed used: 669287718
 ----------------------------------------------------------------
 UVM-1.1d.Synopsys
 (C) 2007-2013 Mentor Graphics Corporation
@@ -55,7 +478,7 @@ UVM-1.1d.Synopsys
 
       (Specify +UVM_NO_RELNOTES to turn off this notice)
 
-UVM_INFO @ 0: reporter [RNTST] Running test AXI_write_fixed_test...
+UVM_INFO @ 0: reporter [RNTST] Running test AXI_write_wrapped_test...
 *Verdi* Loading libsscore_vcs202506.so
 FSDB Dumper for VCS, Release Verdi_X-2025.06, Linux x86_64/64bit, 05/31/2025
 (C) 1996 - 2025 by Synopsys, Inc.
@@ -67,7 +490,7 @@ UVM_INFO @ 0: reporter [UVMTOP] UVM testbench topology:
 -------------------------------------------------------------------
 Name                        Type                        Size  Value
 -------------------------------------------------------------------
-uvm_test_top                AXI_write_fixed_test        -     @483 
+uvm_test_top                AXI_write_wrapped_test      -     @483 
   env                       env                         -     @496 
     AHB_agth[0]             AHB_agent                   -     @870 
       drvh                  AHB_driver                  -     @918 
@@ -162,7 +585,6 @@ uvm_test_top                AXI_write_fixed_test        -     @483
         put_export          uvm_put_imp                 -     @737 
 -------------------------------------------------------------------
 
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 0: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
 UVM_INFO ../AXI_agt/AXI_monitor.sv(55) @ 0: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] AW Channel method started
 UVM_INFO ../AXI_agt/AXI_monitor.sv(83) @ 0: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] AR Channel method started
 UVM_INFO ../tb/scoreboard.sv(123) @ 0: uvm_test_top.env.sbh[0] [scoreboard] got axi data
@@ -170,7 +592,7 @@ UVM_INFO ../AXI_rst_agt/AXI_rst_driver.sv(18) @ 0: uvm_test_top.env.AXI_rst_agth
 -----------------------------------
 Name       Type         Size  Value
 -----------------------------------
-req        AXI_rst_xtn  -     @1669
+req        AXI_rst_xtn  -     @1665
   ARESETn  integral     1     'b0  
   BVALID   integral     1     'bx  
   RVALID   integral     1     'bx  
@@ -179,16 +601,16 @@ UVM_INFO ../AHB_rst_agt/AHB_rst_driver.sv(22) @ 0: uvm_test_top.env.AHB_rst_agth
 -----------------------------------
 Name       Type         Size  Value
 -----------------------------------
-req        AHB_rst_xtn  -     @1673
+req        AHB_rst_xtn  -     @1669
   HRESETn  integral     1     'b0  
-  HREADY   integral     1     'b1  
+  HREADY   integral     1     'b0  
   HTRANS   integral     2     'bxx 
 -----------------------------------
 UVM_INFO ../AXI_rst_agt/AXI_rst_monitor.sv(38) @ 15: uvm_test_top.env.AXI_rst_agth[0].monh [AXI_rst_monitor] Data in AXI RST MONITOR
 -----------------------------------
 Name       Type         Size  Value
 -----------------------------------
-xtn        AXI_rst_xtn  -     @1645
+xtn        AXI_rst_xtn  -     @1641
   ARESETn  integral     1     'b0  
   BVALID   integral     1     'b0  
   RVALID   integral     1     'b0  
@@ -198,7 +620,7 @@ UVM_INFO ../AXI_rst_agt/AXI_rst_driver.sv(18) @ 15: uvm_test_top.env.AXI_rst_agt
 -----------------------------------
 Name       Type         Size  Value
 -----------------------------------
-req        AXI_rst_xtn  -     @1669
+req        AXI_rst_xtn  -     @1665
   ARESETn  integral     1     'b1  
   BVALID   integral     1     'bx  
   RVALID   integral     1     'bx  
@@ -217,16 +639,16 @@ UVM_INFO ../AHB_rst_agt/AHB_rst_driver.sv(22) @ 21: uvm_test_top.env.AHB_rst_agt
 -----------------------------------
 Name       Type         Size  Value
 -----------------------------------
-req        AHB_rst_xtn  -     @1673
+req        AHB_rst_xtn  -     @1669
   HRESETn  integral     1     'b1  
-  HREADY   integral     1     'b1  
+  HREADY   integral     1     'b0  
   HTRANS   integral     2     'bxx 
 -----------------------------------
 UVM_INFO ../AXI_rst_agt/AXI_rst_monitor.sv(38) @ 25: uvm_test_top.env.AXI_rst_agth[0].monh [AXI_rst_monitor] Data in AXI RST MONITOR
 -----------------------------------
 Name       Type         Size  Value
 -----------------------------------
-xtn        AXI_rst_xtn  -     @1773
+xtn        AXI_rst_xtn  -     @1769
   ARESETn  integral     1     'b0  
   BVALID   integral     1     'b0  
   RVALID   integral     1     'b0  
@@ -236,7 +658,7 @@ UVM_INFO ../AXI_rst_agt/AXI_rst_monitor.sv(38) @ 35: uvm_test_top.env.AXI_rst_ag
 -----------------------------------
 Name       Type         Size  Value
 -----------------------------------
-xtn        AXI_rst_xtn  -     @1779
+xtn        AXI_rst_xtn  -     @1775
   ARESETn  integral     1     'b1  
   BVALID   integral     1     'b0  
   RVALID   integral     1     'b0  
@@ -264,7 +686,7 @@ UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 49: uvm_test_top.env.AHB_agth[0].drvh [A
 ---------------------------------------------
 Name       Type      Size  Value             
 ---------------------------------------------
-req        AHB_xtn   -     @1799             
+req        AHB_xtn   -     @1795             
   HADDR    integral  32    'h0               
   HWRITE   integral  1     'b0               
   HTRANS   integral  2     'b0               
@@ -273,18 +695,18 @@ req        AHB_xtn   -     @1799
   HWDATA   integral  64    'h0               
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b0               
-  HRDATA   integral  64    'h7fa7d3f8d04126b5
+  HREADY   integral  1     'b1               
+  HRDATA   integral  64    'hfc3df02e5ad5b00a
   HRESP    integral  1     'b1               
   HGRANT   integral  1     'b1               
-  HMASTER  integral  4     'h0               
+  HMASTER  integral  4     'ha               
 ---------------------------------------------
 UVM_INFO ../AXI_agt/AXI_driver.sv(56) @ 49: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] aw_channel method started
 UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 63: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
 ---------------------------------------------
 Name       Type      Size  Value             
 ---------------------------------------------
-req        AHB_xtn   -     @1799             
+req        AHB_xtn   -     @1795             
   HADDR    integral  32    'h0               
   HWRITE   integral  1     'b0               
   HTRANS   integral  2     'b0               
@@ -293,22 +715,22 @@ req        AHB_xtn   -     @1799
   HWDATA   integral  64    'h0               
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b0               
-  HRDATA   integral  64    'h86e79edf562f1f9b
+  HREADY   integral  1     'b1               
+  HRDATA   integral  64    'hc54b573c6dd1eb0b
   HRESP    integral  1     'b0               
   HGRANT   integral  1     'b1               
-  HMASTER  integral  4     'hb               
+  HMASTER  integral  4     'he               
 ---------------------------------------------
 UVM_INFO ../AXI_agt/AXI_monitor.sv(119) @ 65: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] AW Channel - WRITE DATA in AXI MONITOR
 --------------------------------
 Name       Type      Size  Value
 --------------------------------
-aw_xtn     AXI_xtn   -     @1659
-  AWID     integral  8     'd68 
-  AWADDR   integral  32    'haa 
-  AWLEN    integral  8     'd3  
-  AWSIZE   integral  3     'd0  
-  AWBURST  integral  2     'd0  
+aw_xtn     AXI_xtn   -     @1655
+  AWID     integral  8     'd36 
+  AWADDR   integral  32    'h7d0
+  AWLEN    integral  8     'd1  
+  AWSIZE   integral  3     'd3  
+  AWBURST  integral  2     2    
   AWVALID  integral  1     'b1  
   AWREADY  integral  1     'b1  
   WID      integral  8     'd0  
@@ -338,12 +760,12 @@ UVM_INFO ../AXI_agt/AXI_monitor.sv(119) @ 65: uvm_test_top.env.AXI_agth[0].monh 
 --------------------------------
 Name       Type      Size  Value
 --------------------------------
-aw_xtn     AXI_xtn   -     @1812
-  AWID     integral  8     'd68 
-  AWADDR   integral  32    'haa 
-  AWLEN    integral  8     'd3  
-  AWSIZE   integral  3     'd0  
-  AWBURST  integral  2     'd0  
+aw_xtn     AXI_xtn   -     @1808
+  AWID     integral  8     'd36 
+  AWADDR   integral  32    'h7d0
+  AWLEN    integral  8     'd1  
+  AWSIZE   integral  3     'd3  
+  AWBURST  integral  2     2    
   AWVALID  integral  1     'b1  
   AWREADY  integral  1     'b1  
   WID      integral  8     'd0  
@@ -371,41 +793,37 @@ UVM_INFO ../AXI_agt/AXI_driver.sv(37) @ 75: uvm_test_top.env.AXI_agth[0].drvh [A
 ----------------------------------------------
 Name        Type      Size  Value             
 ----------------------------------------------
-req         AXI_xtn   -     @1791             
-  AWID      integral  8     'd68              
-  AWADDR    integral  32    'haa              
-  AWLEN     integral  8     'd3               
-  AWSIZE    integral  3     'd0               
-  AWBURST   integral  2     'd0               
+req         AXI_xtn   -     @1787             
+  AWID      integral  8     'd36              
+  AWADDR    integral  32    'h7d0             
+  AWLEN     integral  8     'd1               
+  AWSIZE    integral  3     'd3               
+  AWBURST   integral  2     2                 
   AWVALID   integral  1     'b1               
   AWREADY   integral  1     'b0               
-  WID       integral  8     'd68              
-  WDATA[0]  integral  64    'h89c47038ac436175
-  WDATA[1]  integral  64    'h8ad0e5c865a608d 
-  WDATA[2]  integral  64    'h916b3a88f6d4b490
-  WDATA[3]  integral  64    'h62c219e6d225cadb
-  WSTRB[0]  integral  8     'b100             
-  WSTRB[1]  integral  8     'b1000            
-  WSTRB[2]  integral  8     'b10000           
-  WSTRB[3]  integral  8     'b100000          
-  WLAST     integral  1     'b0               
+  WID       integral  8     'd36              
+  WDATA[0]  integral  64    'h6b446654d7d66508
+  WDATA[1]  integral  64    'h58369a92c7e38e01
+  WSTRB[0]  integral  8     'b11111111        
+  WSTRB[1]  integral  8     'b11111111        
+  WLAST     integral  1     'b1               
   WVALID    integral  1     'b1               
   WREADY    integral  1     'b0               
   BID       integral  8     'd0               
   BRESP     integral  1     'b0               
   BVALID    integral  1     'b0               
   BREADY    integral  1     'b1               
-  ARID      integral  8     'd80              
-  ARADDR    integral  32    'd105712564       
-  ARLEN     integral  8     208               
-  ARSIZE    integral  3     'd3               
-  ARBURST   integral  2     'd0               
+  ARID      integral  8     227               
+  ARADDR    integral  32    'd2000            
+  ARLEN     integral  8     'd1               
+  ARSIZE    integral  3     'd0               
+  ARBURST   integral  2     2                 
   ARVALID   integral  1     'b0               
   ARREADY   integral  1     'b0               
   RID       integral  8     'd0               
   RLAST     integral  1     'b0               
   RVALID    integral  1     'b0               
-  RREADY    integral  1     'b1               
+  RREADY    integral  1     'b0               
 ----------------------------------------------
 UVM_INFO ../AXI_agt/AXI_monitor.sv(57) @ 75: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] AW Channel method ended
 UVM_INFO ../AXI_agt/AXI_driver.sv(66) @ 75: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] w_channel method started
@@ -414,7 +832,7 @@ UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 77: uvm_test_top.env.AHB_agth[0].drvh [A
 ---------------------------------------------
 Name       Type      Size  Value             
 ---------------------------------------------
-req        AHB_xtn   -     @1799             
+req        AHB_xtn   -     @1795             
   HADDR    integral  32    'h0               
   HWRITE   integral  1     'b0               
   HTRANS   integral  2     'b0               
@@ -423,141 +841,31 @@ req        AHB_xtn   -     @1799
   HWDATA   integral  64    'h0               
   HBUSREQ  integral  1     'b0               
   HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b0               
-  HRDATA   integral  64    'hd68c0c5d5470519e
-  HRESP    integral  1     'b0               
+  HREADY   integral  1     'b1               
+  HRDATA   integral  64    'h86f2c40abcf39b68
+  HRESP    integral  1     'b1               
   HGRANT   integral  1     'b1               
-  HMASTER  integral  4     'h8               
+  HMASTER  integral  4     'h5               
 ---------------------------------------------
 UVM_INFO ../tb/scoreboard.sv(146) @ 85: uvm_test_top.env.sbh[0] [scoreboard] got data for wdata queue
-UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 91: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
----------------------------------------------
-Name       Type      Size  Value             
----------------------------------------------
-req        AHB_xtn   -     @1799             
-  HADDR    integral  32    'h0               
-  HWRITE   integral  1     'b0               
-  HTRANS   integral  2     'b0               
-  HSIZE    integral  3     'd0               
-  HBURST   integral  3     'd0               
-  HWDATA   integral  64    'h0               
-  HBUSREQ  integral  1     'b0               
-  HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b0               
-  HRDATA   integral  64    'h3e6911d2ed6759f4
-  HRESP    integral  1     'b0               
-  HGRANT   integral  1     'b0               
-  HMASTER  integral  4     'h3               
----------------------------------------------
-UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 105: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
---------------------------------------------
-Name       Type      Size  Value            
---------------------------------------------
-req        AHB_xtn   -     @1799            
-  HADDR    integral  32    'h0              
-  HWRITE   integral  1     'b0              
-  HTRANS   integral  2     'b0              
-  HSIZE    integral  3     'd0              
-  HBURST   integral  3     'd0              
-  HWDATA   integral  64    'h0              
-  HBUSREQ  integral  1     'b0              
-  HLOCK    integral  1     'b0              
-  HREADY   integral  1     'b0              
-  HRDATA   integral  64    'h87af75bb9f6f0a4
-  HRESP    integral  1     'b1              
-  HGRANT   integral  1     'b1              
-  HMASTER  integral  4     'h3              
---------------------------------------------
 UVM_INFO ../tb/scoreboard.sv(146) @ 115: uvm_test_top.env.sbh[0] [scoreboard] got data for wdata queue
-UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 119: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
----------------------------------------------
-Name       Type      Size  Value             
----------------------------------------------
-req        AHB_xtn   -     @1799             
-  HADDR    integral  32    'h0               
-  HWRITE   integral  1     'b0               
-  HTRANS   integral  2     'b0               
-  HSIZE    integral  3     'd0               
-  HBURST   integral  3     'd0               
-  HWDATA   integral  64    'h0               
-  HBUSREQ  integral  1     'b0               
-  HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b1               
-  HRDATA   integral  64    'hd5d4d952984b419b
-  HRESP    integral  1     'b0               
-  HGRANT   integral  1     'b0               
-  HMASTER  integral  4     'h8               
----------------------------------------------
-UVM_INFO ../AHB_agt/AHB_driver.sv(19) @ 133: uvm_test_top.env.AHB_agth[0].drvh [AHB_driver] Data in AHB Driver
----------------------------------------------
-Name       Type      Size  Value             
----------------------------------------------
-req        AHB_xtn   -     @1799             
-  HADDR    integral  32    'h0               
-  HWRITE   integral  1     'b0               
-  HTRANS   integral  2     'b0               
-  HSIZE    integral  3     'd0               
-  HBURST   integral  3     'd0               
-  HWDATA   integral  64    'h0               
-  HBUSREQ  integral  1     'b0               
-  HLOCK    integral  1     'b0               
-  HREADY   integral  1     'b1               
-  HRDATA   integral  64    'h570db5acda4ad9c1
-  HRESP    integral  1     'b0               
-  HGRANT   integral  1     'b1               
-  HMASTER  integral  4     'h3               
----------------------------------------------
-UVM_INFO ../tb/scoreboard.sv(146) @ 145: uvm_test_top.env.sbh[0] [scoreboard] got data for wdata queue
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 161: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(44) @ 161: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(46) @ 161: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(62) @ 161: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "--------------------------------
-Name       Type      Size  Value
---------------------------------
-ahb_xtn    AHB_xtn   -     @1635
-  HADDR    integral  32    'haa 
-  HWRITE   integral  1     'b1  
-  HTRANS   integral  2     'b10 
-  HSIZE    integral  3     'd0  
-  HBURST   integral  3     'd0  
-  HWDATA   integral  64    'h0  
-  HBUSREQ  integral  1     'b0  
-  HLOCK    integral  1     'b0  
-  HREADY   integral  1     'b1  
-  HRDATA   integral  64    'h0  
-  HRESP    integral  1     'b0  
-  HGRANT   integral  1     'b0  
-  HMASTER  integral  4     'h0  
---------------------------------
-"
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 161: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 161: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../tb/scoreboard.sv(135) @ 161: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
-UVM_INFO ../tb/scoreboard.sv(188) @ 161: uvm_test_top.env.sbh[0] [scoreboard] waiting for wdata queue
-UVM_INFO ../tb/scoreboard.sv(197) @ 161: uvm_test_top.env.sbh[0] [scoreboard] DATA MISMATCH :(, axi_wdata = 430000, ahb_wdata = 0
-UVM_INFO ../tb/scoreboard.sv(146) @ 175: uvm_test_top.env.sbh[0] [scoreboard] got data for wdata queue
-UVM_INFO ../AXI_agt/AXI_monitor.sv(163) @ 175: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] W Channel - WRITE DATA in AXI MONITOR
+UVM_INFO ../AXI_agt/AXI_monitor.sv(163) @ 115: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] W Channel - WRITE DATA in AXI MONITOR
 ----------------------------------------------
 Name        Type      Size  Value             
 ----------------------------------------------
-aw_xtn      AXI_xtn   -     @1659             
-  AWID      integral  8     'd68              
-  AWADDR    integral  32    'haa              
-  AWLEN     integral  8     'd3               
-  AWSIZE    integral  3     'd0               
-  AWBURST   integral  2     'd0               
+aw_xtn      AXI_xtn   -     @1655             
+  AWID      integral  8     'd36              
+  AWADDR    integral  32    'h7d0             
+  AWLEN     integral  8     'd1               
+  AWSIZE    integral  3     'd3               
+  AWBURST   integral  2     2                 
   AWVALID   integral  1     'b1               
   AWREADY   integral  1     'b1               
-  WID       integral  8     'd68              
-  WDATA[0]  integral  64    'h89c47038ac436175
-  WDATA[1]  integral  64    'h8ad0e5c865a608d 
-  WDATA[2]  integral  64    'h916b3a88f6d4b490
-  WDATA[3]  integral  64    'h62c219e6d225cadb
-  WSTRB[0]  integral  8     'b100             
-  WSTRB[1]  integral  8     'b1000            
-  WSTRB[2]  integral  8     'b10000           
-  WSTRB[3]  integral  8     'b100000          
+  WID       integral  8     'd36              
+  WDATA[0]  integral  64    'h6b446654d7d66508
+  WDATA[1]  integral  64    'h58369a92c7e38e01
+  WSTRB[0]  integral  8     'b11111111        
+  WSTRB[1]  integral  8     'b11111111        
   WLAST     integral  1     'b1               
   WVALID    integral  1     'b1               
   WREADY    integral  1     'b1               
@@ -577,158 +885,72 @@ aw_xtn      AXI_xtn   -     @1659
   RVALID    integral  1     'b0               
   RREADY    integral  1     'b0               
 ----------------------------------------------
-UVM_INFO ../AXI_agt/AXI_monitor.sv(67) @ 175: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] W Channel method ended
-UVM_INFO ../AHB_agt/AHB_monitor.sv(44) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(46) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(62) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "-----------------------------------
-Name       Type      Size  Value   
------------------------------------
-ahb_xtn    AHB_xtn   -     @1833   
-  HADDR    integral  32    'haa    
-  HWRITE   integral  1     'b1     
-  HTRANS   integral  2     'b10    
-  HSIZE    integral  3     'd0     
-  HBURST   integral  3     'd0     
-  HWDATA   integral  64    'h430000
-  HBUSREQ  integral  1     'b0     
-  HLOCK    integral  1     'b0     
-  HREADY   integral  1     'b1     
-  HRDATA   integral  64    'h0     
-  HRESP    integral  1     'b0     
-  HGRANT   integral  1     'b0     
-  HMASTER  integral  4     'h0     
------------------------------------
+UVM_INFO ../AXI_agt/AXI_monitor.sv(67) @ 115: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] W Channel method ended
+UVM_INFO ../AXI_agt/AXI_monitor.sv(75) @ 115: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] B Channel method started
+UVM_INFO ../AXI_agt/AXI_monitor.sv(65) @ 115: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] W Channel method started
+UVM_INFO ../AXI_agt/AXI_driver.sv(68) @ 135: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] w_channel method ended
+UVM_INFO ../AXI_agt/AXI_driver.sv(76) @ 135: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] b_channel method started
+UVM_INFO ../AXI_agt/AXI_driver.sv(140) @ 155: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] Inside b_channel driving logic - waiting for bvalid
+UVM_INFO ../AHB_agt/AHB_monitor.sv(39) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
+ "---------------------------------------------
+Name       Type      Size  Value             
+---------------------------------------------
+pend_xtn   AHB_xtn   -     @1833             
+  HADDR    integral  32    'h7d0             
+  HWRITE   integral  1     'b1               
+  HTRANS   integral  2     'b10              
+  HSIZE    integral  3     'd3               
+  HBURST   integral  3     'd0               
+  HWDATA   integral  64    'h6b446654d7d66508
+  HBUSREQ  integral  1     'b0               
+  HLOCK    integral  1     'b0               
+  HREADY   integral  1     'b1               
+  HRDATA   integral  64    'h0               
+  HRESP    integral  1     'b0               
+  HGRANT   integral  1     'b0               
+  HMASTER  integral  4     'h0               
+---------------------------------------------
 "
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 175: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../AXI_agt/AXI_monitor.sv(75) @ 175: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] B Channel method started
-UVM_INFO ../AXI_agt/AXI_monitor.sv(65) @ 175: uvm_test_top.env.AXI_agth[0].monh [AXI_monitor] W Channel method started
 UVM_INFO ../tb/scoreboard.sv(135) @ 175: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
 UVM_INFO ../tb/scoreboard.sv(188) @ 175: uvm_test_top.env.sbh[0] [scoreboard] waiting for wdata queue
-UVM_INFO ../tb/scoreboard.sv(197) @ 175: uvm_test_top.env.sbh[0] [scoreboard] DATA MISMATCH :(, axi_wdata = 86000000, ahb_wdata = 430000
-UVM_INFO ../AHB_agt/AHB_monitor.sv(44) @ 189: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(46) @ 189: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(62) @ 189: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "-------------------------------------
-Name       Type      Size  Value     
--------------------------------------
-ahb_xtn    AHB_xtn   -     @1841     
-  HADDR    integral  32    'haa      
-  HWRITE   integral  1     'b1       
-  HTRANS   integral  2     'b10      
-  HSIZE    integral  3     'd0       
-  HBURST   integral  3     'd0       
-  HWDATA   integral  64    'h86000000
-  HBUSREQ  integral  1     'b0       
-  HLOCK    integral  1     'b0       
-  HREADY   integral  1     'b1       
-  HRDATA   integral  64    'h0       
-  HRESP    integral  1     'b0       
-  HGRANT   integral  1     'b0       
-  HMASTER  integral  4     'h0       
--------------------------------------
+UVM_INFO ../tb/scoreboard.sv(193) @ 175: uvm_test_top.env.sbh[0] [scoreboard] DATA MATCH :)
+UVM_INFO ../tb/scoreboard.sv(194) @ 175: uvm_test_top.env.sbh[0] [scoreboard] axi_wdata = 6b446654d7d66508, ahb_wdata = 6b446654d7d66508
+UVM_INFO ../AHB_agt/AHB_monitor.sv(39) @ 189: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
+ "---------------------------------------------
+Name       Type      Size  Value             
+---------------------------------------------
+pend_xtn   AHB_xtn   -     @1837             
+  HADDR    integral  32    'h7d0             
+  HWRITE   integral  1     'b1               
+  HTRANS   integral  2     'b10              
+  HSIZE    integral  3     'd3               
+  HBURST   integral  3     'd0               
+  HWDATA   integral  64    'h58369a92c7e38e01
+  HBUSREQ  integral  1     'b0               
+  HLOCK    integral  1     'b0               
+  HREADY   integral  1     'b1               
+  HRDATA   integral  64    'h0               
+  HRESP    integral  1     'b0               
+  HGRANT   integral  1     'b0               
+  HMASTER  integral  4     'h0               
+---------------------------------------------
 "
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 189: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 189: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
 UVM_INFO ../tb/scoreboard.sv(135) @ 189: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
 UVM_INFO ../tb/scoreboard.sv(188) @ 189: uvm_test_top.env.sbh[0] [scoreboard] waiting for wdata queue
-UVM_INFO ../tb/scoreboard.sv(197) @ 189: uvm_test_top.env.sbh[0] [scoreboard] DATA MISMATCH :(, axi_wdata = 8800000000, ahb_wdata = 86000000
-UVM_INFO ../AXI_agt/AXI_driver.sv(68) @ 195: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] w_channel method ended
-UVM_INFO ../AXI_agt/AXI_driver.sv(76) @ 195: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] b_channel method started
-UVM_INFO ../AHB_agt/AHB_monitor.sv(44) @ 203: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(46) @ 203: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(62) @ 203: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "---------------------------------------
-Name       Type      Size  Value       
----------------------------------------
-ahb_xtn    AHB_xtn   -     @1853       
-  HADDR    integral  32    'hab        
-  HWRITE   integral  1     'b1         
-  HTRANS   integral  2     'b10        
-  HSIZE    integral  3     'd0         
-  HBURST   integral  3     'd0         
-  HWDATA   integral  64    'h8800000000
-  HBUSREQ  integral  1     'b0         
-  HLOCK    integral  1     'b0         
-  HREADY   integral  1     'b1         
-  HRDATA   integral  64    'h0         
-  HRESP    integral  1     'b0         
-  HGRANT   integral  1     'b0         
-  HMASTER  integral  4     'h0         
----------------------------------------
-"
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 203: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 203: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../tb/scoreboard.sv(135) @ 203: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
-UVM_INFO ../tb/scoreboard.sv(188) @ 203: uvm_test_top.env.sbh[0] [scoreboard] waiting for wdata queue
-UVM_INFO ../tb/scoreboard.sv(197) @ 203: uvm_test_top.env.sbh[0] [scoreboard] DATA MISMATCH :(, axi_wdata = 190000000000, ahb_wdata = 8800000000
-UVM_INFO ../AXI_agt/AXI_driver.sv(140) @ 215: uvm_test_top.env.AXI_agth[0].drvh [AXI_driver] Inside b_channel driving logic - waiting for bvalid
-UVM_INFO ../AHB_agt/AHB_monitor.sv(44) @ 217: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(46) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(62) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "--------------------------------
-Name       Type      Size  Value
---------------------------------
-ahb_xtn    AHB_xtn   -     @1857
-  HADDR    integral  32    'hac 
-  HWRITE   integral  1     'b1  
-  HTRANS   integral  2     'b10 
-  HSIZE    integral  3     'd0  
-  HBURST   integral  3     'd0  
-  HWDATA   integral  64    'h0  
-  HBUSREQ  integral  1     'b0  
-  HLOCK    integral  1     'b0  
-  HREADY   integral  1     'b1  
-  HRDATA   integral  64    'h0  
-  HRESP    integral  1     'b0  
-  HGRANT   integral  1     'b0  
-  HMASTER  integral  4     'h0  
---------------------------------
-"
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../tb/scoreboard.sv(135) @ 245: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
-UVM_INFO ../tb/scoreboard.sv(188) @ 245: uvm_test_top.env.sbh[0] [scoreboard] waiting for wdata queue
-UVM_INFO ../AHB_agt/AHB_monitor.sv(44) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(46) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, after wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(62) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] Monitor Data: 
- "--------------------------------
-Name       Type      Size  Value
---------------------------------
-ahb_xtn    AHB_xtn   -     @1861
-  HADDR    integral  32    'had 
-  HWRITE   integral  1     'b1  
-  HTRANS   integral  2     'b10 
-  HSIZE    integral  3     'd0  
-  HBURST   integral  3     'd0  
-  HWDATA   integral  64    'h0  
-  HBUSREQ  integral  1     'b0  
-  HLOCK    integral  1     'b0  
-  HREADY   integral  1     'b1  
-  HRDATA   integral  64    'h0  
-  HRESP    integral  1     'b0  
-  HGRANT   integral  1     'b0  
-  HMASTER  integral  4     'h0  
---------------------------------
-"
-UVM_INFO ../AHB_agt/AHB_monitor.sv(28) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, before wait
-UVM_INFO ../AHB_agt/AHB_monitor.sv(30) @ 245: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside task, after wait
-UVM_INFO ../tb/scoreboard.sv(135) @ 245: uvm_test_top.env.sbh[0] [scoreboard] got ahb data
-UVM_INFO ../tb/scoreboard.sv(188) @ 245: uvm_test_top.env.sbh[0] [scoreboard] waiting for wdata queue
-UVM_INFO ../AHB_agt/AHB_monitor.sv(44) @ 259: uvm_test_top.env.AHB_agth[0].monh [AHB_monitor] inside hwrite monitor, before wait
-UVM_INFO /home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_objection.svh(1274) @ 447: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../tb/scoreboard.sv(193) @ 189: uvm_test_top.env.sbh[0] [scoreboard] DATA MATCH :)
+UVM_INFO ../tb/scoreboard.sv(194) @ 189: uvm_test_top.env.sbh[0] [scoreboard] axi_wdata = 58369a92c7e38e01, ahb_wdata = 58369a92c7e38e01
+UVM_INFO /home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_objection.svh(1274) @ 391: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
 
 --- UVM Report Summary ---
 
 ** Report counts by severity
-UVM_INFO :   98
+UVM_INFO :   53
 UVM_WARNING :    0
 UVM_ERROR :    0
 UVM_FATAL :    0
 ** Report counts by id
-[AHB_driver]     7
-[AHB_monitor]    33
+[AHB_driver]     3
+[AHB_monitor]     2
 [AHB_rst_driver]     2
 [AHB_rst_monitor]     3
 [AXI_driver]     7
@@ -738,10 +960,10 @@ UVM_FATAL :    0
 [RNTST]     1
 [TEST_DONE]     1
 [UVMTOP]     1
-[scoreboard]    25
+[scoreboard]    15
 $finish called from file "/home/cad/eda/SYNOPSYS/vcs_all_vX-2025.06/vcs/X-2025.06/etc/uvm/base/uvm_root.svh", line 437.
-$finish at simulation time                  447
+$finish at simulation time                  391
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 447 ns
-CPU Time:      0.410 seconds;       Data structure size:   0.8Mb
-Mon Aug  3 18:26:16 2026
+Time: 391 ns
+CPU Time:      0.400 seconds;       Data structure size:   0.8Mb
+Mon Aug  3 19:01:27 2026
